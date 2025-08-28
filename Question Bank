@@ -1,0 +1,2040 @@
+BDM     Question Bank 
+2025 Jan 
+Q1 - What does the law of demand state? 
+A. As the price of good inc, quantity demanded increases 
+B. As the price of a good decreases, the quantity demanded decreases 
+C. As the price of a good increases, the quantity supplied decreases 
+D. As the price of a good decreases, the quantity supplied increases 
+Q2 - Which function would you use to count the number of cells that meet a 
+specific condition? 
+A. COUNT 
+B. COUNTA 
+C. COUNTIF 
+D. COUNTSUM 
+Q3 - In a saturated smartphone market where 70% of current users express 
+interest in upgrading their phones in the next two months, and the no. of new 
+smartphone users remain unchanged, what should 
+companies/manufacturers prioritize? 
+A. Expand distribution channels to reach untapped geographic regions. 
+B. Focus on females as their target customers. 
+C. Invest in research and development to create innovative features for 
+new customers. 
+D. Develop targeted upgrade incentives and promotions for current users 
+looking to replace their old devices 
+Q4 - What does the Days of Sales of Inventory indicate? 
+A. The average number of days required by a company to turn its 
+inventory into sales. 
+B. The number of days when inventory is zero in a year 
+C. Total number of days when inventory sales is zero due to lack of 
+inventory 
+D. The average number of inventory stockout days in a month 
+Q5 - Which of the following factors is most critical in determining the market 
+potential for a new product ? 
+A. The size of the target market and percentage of potential customers 
+interested in the product. 
+B. Historical sale data of unrelated products. 
+C. Cost of production and distribution. 
+D. Current market share of existing products. 
+Q6 - Which metric is most important to monitor during an A/B test? 
+A. Total number of users tested in the experiment 
+B. Uptime of the system 
+C. Key performance indicators (KPIs) specific to the experiment 
+D. Model training time 
+Q7 - Question Label : Multiple Choice Question 
+Arrange the following steps while working with unstructured data in a 
+ranking modelling: 
+I. Normalizing 
+II. Preprocessing 
+III. Ranking 
+IV. Composite score 
+A. I -> II -> III -> IV 
+B. II -> I -> IV -> III 
+C. I -> II -> I -> IV -> III 
+D. I -> II -> I -> III -> IV 
+Q8 - If a FinTech company wants to cut down losses, which of the following 
+should they do? 
+A. Decrease approval cutoff of credit score 
+B. Increase interest rate 
+C. Increase approval limit for loans 
+D. Increase approval cutoff of credit score 
+E. Give more loans 
+Q9 - PayBuddy conducted an A/B test to understand if their new Funding 
+Instrument recommendation strategy works well. Following are the details of 
+the control and treatment groups. From the given table, which of the 
+following statements are true? 
+i. Value of Credit transactions increased with the new recommendation 
+strategy 
+ii. Value of Debit transactions increased with the new recommendation 
+strategy 
+iii. Value of both Credit and Debit transactions increased with the new 
+recommendation strategy 
+iv. Value of Credit transactions decreased with the new recommendation 
+strategy 
+v. Value of Debit transactions decreased with the new recommendation 
+strategy 
+ 
+Group Avg sum of credit 
+transactions per 
+customer 
+Avg sum of debit 
+transactions per 
+customer 
+Treatment 1725 $ 2780 $ 
+Control 1810 $  2679 $ 
+ 
+A. Both (i) & (v) 
+B. Only (iii) 
+C. Only (i) 
+D. Both (ii) & (iv) 
+E. Only (v) 
+ 
+Q10 - PePhone is a FinTech firm that processes payments. Following are 
+sources of revenue for the company – 3.5% of transaction amount as 
+transaction fee from merchants for all types of transactions (credit and 
+debit), 18% p.a. interest on credit transactions and incurs a loss of credit if 
+not paid back. Calculate the overall profit for the company based on the 
+below table – (Assume payback of credit in a year) 
+Note: Declined transactions will not get credit but customers will complete 
+the payment through PePhone using their bank details. 
+ 
+A.  
+B. – 211.0 
+C. – 192.72 
+D. –131.94 
+E. – 162.18 
+Cust Id Date of 
+Application 
+Cust 
+Segme
+ nt 
+Appli
+ c 
+Credi
+ tScor
+ e 
+Applicat
+ ionAmo
+ unt 
+Approve
+ d vs 
+Decline
+ d 
+Decline 
+Reason 
+Paid 
+Back or 
+Default
+ ed 
+17289 26/03/21 Low 588 168 Approve
+ d 
+ PB 
+17290 17/02/21 Mid 635 109 Approve
+ d 
+ D 
+17291 23/02/21 High 455 183 Declined System 
+Issue 
+NA 
+17292 20/02/21 Mid 484 334 Declined Credit 
+Risk 
+NA 
+17293 05/02/21 Mid 637 102 Approve
+ d 
+ D 
+17294 11/01/21 Mid 559 499 Declined Credit 
+Risk 
+NA 
+Q11 - Which of the following conditions can use the concept of "weighted 
+average" to analyse 
+expenditure data? 
+A. By considering importance of expenditure categories 
+B. By considering the population size of different regions 
+C. By adjusting for inflation over time 
+D. By analyzing the impact of income levels on expenditure 
+Q12 - In Excel, the SUBTOTAL function is used to perform calculations on a 
+f
+ iltered range of data. Which of the following statements about the 
+SUBTOTAL function is correct? 
+A. SUBTOTAL can only calculate the sum of a range and ignores hidden 
+rows in the filtered data. 
+B. SUBTOTAL can perform various calculations, including sum, average, 
+count, and more, and it ignores rows hidden by filters. 
+C. SUBTOTAL performs calculations only on rows that are manually 
+hidden, not those hidden by filters. 
+D. SUBTOTAL can calculate results based on data in any worksheet, 
+regardless of whether the data is visible or hidden. 
+Answer Q13,14 on the basis of this  
+Income Level 1 
+Income 
+Rs 15000 
+Income Level 2 
+Rs 25000 
+Qty Demanded 
+Price per qty 
+60 units 
+Rs 40 
+90 units 
+Rs 38 
+Q13 - Determine the percentage change in total revenue when income 
+increases from Rs 15000 to Rs 25000. 
+A. 41.2% 
+B. 42% 
+C. 42.5% 
+D. 41.8% 
+Q14 - What is the type of goods based on the given table? 
+A. Normal Goods 
+B. Inferior Goods 
+C. Luxury Goods 
+D. None of these 
+Answer Q15, Q16, Q17 on basis of this 
+Product 
+Prod Id Month 1 
+sales 
+Month 2 
+sales 
+Month 3 
+sales 
+Unit Price 
+Widget A SKU01 120 150 130 25 
+Widget B SKU02 80 90 70 15 
+Gadget X SKU03 200 180 210 40 
+Gadget Y SKU04 50 60 55 50 
+Accessory Z SKU05 30 40 35 30 
+Widget C SKU06 100 110 120 20 
+Gadget Q SKU07 90 100 95 35 
+Accessory X SKU08 60 70 65 10 
+ 
+Q15 - The total revenue of the firm is: 
+A. 67125 
+B. 66895 
+C. 65285 
+D. 67565 
+ 
+Q16 - In terms of sales trend, which product has a continuously increasing 
+trend? 
+A. Gadget X 
+B. Widget A 
+C. Widget C 
+D. Gadget Q 
+ 
+Q17 - What percentage of total revenue do Widgets contribute? 
+A. 30.1% 
+B. 42.4% 
+C. 25.6% 
+D. 35.5% 
+ 
+ 
+Answer Q18, Q19, Q20, Q21 on the basis of this  
+ 
+Planned 
+Producti
+ on Time 
+(hrs) 
+Los
+ t 
+tim
+ e 
+Actual 
+Machi
+ ne 
+Speed 
+Desig
+ n 
+Machi
+ ne 
+Speed 
+Good 
+Units 
+Produc
+ ed 
+Availabilit
+ y 
+Performa
+ nce 
+Qualit
+ y 
+OEE 
+8 X1 X2 200 1050 87.50% 90% X3 X4 
+ 
+Q18 - X1: 
+ 
+Q19 - X2:  
+ 
+Q20 - X3 in %:  
+ 
+Q21 - X4 in %:  
+Answer Q22, Q23, Q24 on the basis of this 
+1. A form created by HR that 
+outlines the budgetary details, 
+skills and capabilities required 
+etc 
+2. Organization source talent by 
+asking their existing 
+employees to recommend 
+candidates from existing 
+networks 
+a) Appraisal 
+b) Indent 
+3. The process of evaluating an 
+employee’s current and/or 
+post performance 
+c) Employee referral 
+Q22 - A form created by HR that outlines the budgetary details, skills and 
+capabilities required etc. 
+Options : 
+A. Appraisal 
+B. Indent 
+C. Employee referral 
+D. None of these 
+Q23 - Organization source talent by asking their existing employees to 
+recommend candidates from their existing networks. 
+Options : 
+A. Appraisal 
+B. Indent 
+C. Employee referral 
+D. None of these 
+Q24 - The process of evaluating an employee’s current and/or past 
+performance 
+Options : 
+A. Appraisal 
+B. Indent 
+C. Employee referral 
+D. None of these 
+ANSWER KEY  
+1. A 
+2. C 
+3. D 
+4. A 
+5. A 
+6. C 
+7. B 
+8. D 
+9. D 
+10. B 
+11. AB 
+12. AB 
+13. C 
+14. A 
+15. A 
+16. C 
+17. A 
+18. 1 
+19. 180 
+20. 83 TO 83.5 
+21. 65 TO 65.75 
+22. B 
+23. C 
+24. A 
+2024 Jan 
+Q1. What distinguishes an inferior good regarding its relationship with income?  
+A. Demand increases with rising income 
+B. Demand decreases as income increases 
+C. Its demand curve remains unaffected by income changes  
+D. It has no substitutes in the market 
+Q2. A manufacturer finds that over the past year, there has been a shift in consumer 
+preference within 
+the two-wheeler market: the demand for scooters has decreased by 10%, whereas 
+the demand for 
+motorcycles, especially higher-capacity models, has increased by 15%. Given this 
+trend, how 
+should the manufacturer adjust its product portfolio? 
+A. Increase production of scooters to clear out existing inventories. 
+B. Shift manufacturing focus towards higher-capacity motorcycles to meet rising 
+demand. 
+C. Keep the production rates the same, expecting the market to stabilize. 
+D. Focus exclusively on high-capacity motorcycles and cease scooter 
+production. 
+Q3. If a pivot table analysis reveals that a lender’s portfolio has shifted from 
+predominantly 
+commercial loans to a more diversified portfolio including significant amounts of retail 
+and 
+microfinance loans over the years, what might this indicate about the lender’s 
+strategic shift? 
+A. Diversification to mitigate risk 
+B. Shifting market demand 
+C. Regulatory Changes Influencing Lending Practices 
+D. Not enough data is given in the situation to determine 
+Q4. Identifying and eliminating outliers in revenue data is crucial because they can: 
+A. Significantly skew overall data analysis and interpretation 
+B. Improve the accuracy of the data set 
+C. Decrease the workload involved in data processing 
+D. They do not provide any useful insights 
+Q5. How does an increase in the ordering cost per order affect the EOQ? 
+A. It increases the EOQ. 
+B. It decreases the EOQ. 
+C. It does not affect the EOQ. 
+D. It causes the EOQ to fluctuate unpredictably.  
+Q6. Which of the following is an example of the anchoring effect used as a nudge on 
+e-commerce websites? 
+A. Presenting a high initial price next to the sale price to make the discount 
+appear more significant 
+B. Offering every product at a flat discount rate 
+C. Displaying the most expensive items exclusively 
+D. Always showing only the lowest price available for every product 
+Q7. What is the underlying rationale for PayBuddy offering a BNPL service without 
+charging interest or late fees? 
+A. To accumulate a large unpaid debt that can be written off for tax benefits. 
+B. To engage customers more deeply, increasing transaction volumes and 
+platform loyalty 
+C. Assuming that late fees and interest can be retroactively applied for long-term 
+profit.  
+D. To attract regulatory scrutiny as a marketing stunt to gain public attention.  
+Q8. If a company identifies a seasonal pattern in their sales data, how should this 
+influence their inventory management strategy? 
+A. Increase inventory levels uniformly throughout the year to avoid any potential 
+stockouts. 
+B. Adjust inventory levels based on historical sales data to match the anticipated 
+seasonal demand. 
+C. Reduce inventory levels during peak seasons to minimize holding costs. 
+D. Keep inventory levels constant, ignoring seasonal trends to simplify logistics. 
+Q9. How does the concept of homogeneous regions benefit the sampling process in 
+surveys? 
+A. Ensures a diversity of samples by mixing different regions indiscriminately 
+B. Eliminates bias by selecting samples from areas with similar characteristics 
+C. Focuses solely on urban areas for increased data accuracy 
+D. Prioritizes high-income regions to reflect economic prosperity 
+Q10. In strategic manpower planning, which of the factors is the least relevant for 
+determining the number of employees needed? 
+A. The historical turnover rate within the industry 
+B. The predicted revenue for the next fiscal year 
+C. The specific business objectives and forthcoming projects 
+D. The current unemployment rate in the market 
+Q11. In the context of IT services, what is the primary purpose of maintaining a 
+bench or buffer of employees? 
+A. To have resources readily available for unforeseen project needs. 
+B. To keep underperforming employees off critical projects. 
+C. To reduce the company’s overall payroll expenses. 
+D. To comply with industry-standard HR practices. 
+Consider the following table and scatter plot and answer the questions 
+Product ID 
+P001 
+Product Category Sales Quantity 
+Electronics 
+150 
+Revenue ($) 
+450 
+P002 
+P003 
+P004 
+P005 
+P006 
+Clothing 
+200 
+Home Appliances 100 
+Electronics 
+Clothing 
+250 
+150 
+Home Appliances 80 
+Sales V/S Product Plot
+ 3000 
+5000 
+7500 
+2250 
+3200 
+Revenue V/S Product Plot
+Scatter Plot 
+Q12. If you color-code the data points on the scatter plot by "Product Category," 
+which of the following statements would likely be true? 
+A. All categories will cluster together, showing no distinct grouping 
+B. Electronics might form a cluster with higher revenue compared to other 
+categories.  
+C. Clothing will show the highest sales quantity and revenue. 
+D. Home Appliances will demonstrate the least variability in sales quantity and 
+revenue 
+Q13. Considering the given data, which category has the highest average revenue 
+per unit? 
+A. Home Appliances 
+B. Clothing 
+C. Electronics  
+Q14. The teacher wants to assign students grades based on their Maths marks 
+using the IF function. Which Excel formula represents the correct structure for this 
+conditional grading? 
+A. =IF(C2<20, “A”, IF(C2>15, “B”, IF(C2>10, “C”, “D”))) 
+B. =IF(C2<20, “A”, IF(C2<15, “B”, IF(C2<10, “C”, “D”))) 
+C. =IF(C2>=20, “A”, IF(C2>=15, “B”, IF(C2>=10, “C”, “D”))) 
+D. =IF(C2<=20, “A”, IF(C2<=15, “B”, IF(C2<=10, “C”, “D”))) 
+Four candidates are being considered for a Software Engineer position. The hiring 
+committee has rated them based on the number of relevant skills they possess, the 
+number of days they can join in, the number of relevant certificates they hold, and 
+their years of relevant experience. Give all the criteria the same weightage. Evaluate 
+the data below and determine which candidate should be ranked the highest based 
+on the given criteria (more skills, more certificates, more experience are better; fewer 
+days to join is better).  
+Candidate A: 
+● Number of relevant skills: 12 
+● Days to join: 30 
+● Number of relevant certificates: 5 
+● Years of relevant experience: 3 
+Candidate B: 
+● Number of relevant skills: 15 
+● Days to join: 45 
+● Number of relevant certificates: 3 
+● Years of relevant experience: 4 
+Candidate C: 
+● Number of relevant skills: 10 
+● Days to join: 20 
+● Number of relevant certificates: 7 
+● Years of relevant experience: 5 
+Candidate D: 
+● Number of relevant skills: 14 
+● Days to join: 15 
+● Number of relevant certificates: 4 
+● Years of relevant experience: 6 
+Q15. Choose the correct ranking of the candidates from most suitable to least 
+suitable: 
+A. Candidate D > Candidate C > Candidate A or Candidate B 
+B. Candidate B > Candidate A > Candidate C, Candidate D 
+C. Candidate D > Candidate A > Candidate C > Candidate B 
+D. Candidate C > Candidate D > Candidate A or Candidate B 
+Q16. A company has noticed that its average days of inventory are significantly 
+lower than the industry standard. Which of the following statements describes the 
+potential consequences of this situation? MCQ 
+A. Increased carrying costs due to holding excess inventory.  
+B. Higher likelihood of stockouts, leading to possible lost sales.  
+C. Less need for warehouse space, reducing storage cost inefficiencies. 
+D. Lower inventory obsolescence risks and reduced waste 
+Q17. Considering the sales data and inventory levels for SKU cities (distribution 
+centres) like Hyderabad, Cochin, and Madras, what could be a significant risk if the 
+average sales drastically change over a short period?{Select All that apply} MCQ 
+A. Overestimation of inventory needs leading to excess stock.  
+B. Underestimation of lead times for inventory replenishment. 
+C. Inaccurate calculation of the total opening stock. 
+D. Misalignment between sales forecasts and actual sales data 
+Q18. Which of the following best describes the strategic advantage of internal 
+sourcing?{Select All that apply} MCQ 
+A. It eliminates the need for an external recruitment process entirely. 
+B. It guarantees a 100% success rate in employee performance post-transition.  
+C. Could speed up the process of staffing the job position 
+D. Better familiarity reduces the risk that selected person may turn out to be 
+incompetent  
+ 
+ 
+Q19. Imagine, you are an efficiency consultant hired by ABC Corp, a company that 
+manufactures automotive parts. Your first assignment is to evaluate the performance 
+of their primary production line. The provided data includes: 
+ 
+● The planned production time for last quarter was 700 hours. 
+● Unexpectedly, the line experienced 60 hours of lost time. 
+● The expected assembly rate of the line was 200 units per hour. 
+● However, the actual rate achieved was 180 units per hour. 
+● Over the quarter, 14,000 units were assembled. 
+● Out of these, 700 units were found to be defective. 
+ 
+HINT: 
+OEE = AVAILABILITY x PERFORMANCE x QUALITY 
+ If your calculations result in 0.2856 as the answer, please enter 28.56 and not 
+28.56%, or 0.2856 
+User_ID Group Daily_Playti
+ me_Minute
+ s 
+In_Game_P
+ urchase 
+Game_Vers
+ ion 
+Player_Exp
+ erience_Le
+ vel 
+1 A 40 0 Old Beginner 
+2 B 30 1 New Intermediat
+ e 
+3 A 35 1 Old Advanced 
+4 B 30 0 New Beginner 
+5 A 50 0 Old Intermediat
+ e 
+6 B 50 1 New Advanced 
+7 A 20 1 Old Beginner 
+8 B 55 0 New Intermediat
+ e 
+9 A 75 1 Old Advanced 
+10 B 30 1 New Beginner 
+11 A 70 1 Old Intermediat
+ e 
+12 B 45 1 New Advanced 
+13 A 50 0 Old Beginner 
+14 B 65 0 New Intermediat
+ e 
+15 A 75 1 Old Advanced 
+16 B 35 1 New Beginner 
+17 A 80 0 Old Intermediat
+ e 
+18 
+19 
+20 
+B 
+A 
+B 
+80 
+65 
+70 
+1 
+1 
+0 
+New 
+Old 
+New 
+Based on the above data, answer the given subquestions. 
+Advanced 
+Beginner 
+Intermediat
+ e 
+Q20. Evaluate the influence of the new game tutorial on player engagement. How 
+does the average Daily_Playtime_Minutes compare between the two groups? 
+A. Group B has significantly higher average playtime, indicating the new tutorial 
+is more engaging.  
+B. Group A shows higher average playtime, suggesting the old tutorial is more 
+effective. 
+C. No significant difference in playtime between the groups, indicating the new 
+tutorial has minimal impact. 
+D. The average playtime is higher in Group B, but not significantly, suggesting a 
+slight advantage of the new tutorial 
+Q21. Which Player_Experience_Level benefited most from the new game tutorial in 
+terms of In_Game_Purchase? 
+A. Beginners are making much more purchases with the new tutorial 
+B. Intermediate players show a significant increase in purchases 
+C. Advanced players have a higher purchase rate with the new tutorial 
+D. There's no noticeable difference in purchase behavior across experience 
+levels 
+Q22. Considering the new tutorial's impact, which statement best reflects the data 
+observed? 
+A. The new tutorial has universally improved in-game purchases across all 
+player levels.  
+B. Only advanced players show a significant uptick in daily playtime with the new 
+tutorial. 
+C. All players have decreased their playtime, potentially indicating a dislike for 
+the new tutorial.  
+D. Beginners and advanced players show increased engagement, but 
+intermediate players do not. 
+Q23. What does the distribution of In_Game_Purchases in Group B suggest about 
+the new tutorial’s effectiveness? 
+A. It's highly effective, as most players increased their purchases.  
+B. Effectiveness is moderate; only some players increased their purchases.. 
+C. The new tutorial has no clear impact on purchase behavior. 
+D. It is less effective; fewer players made purchases after the introduction of the 
+new tutorial. 
+ANSWERS 
+1. B 
+2. B 
+3. D 
+4. A 
+5. A 
+6. A 
+7. B 
+8. B 
+9. B 
+10. D 
+11. A 
+12. B 
+13. A 
+14. C 
+15. A 
+16. B,C 
+17. A,B,C,D 
+18. C,D 
+19. 77 TO 79 
+20. B 
+21. D 
+22. C 
+23. D 
+2024 MAY 
+Question 1: In the economic flow, what role do households typically play? 
+A) Suppliers of capital 
+B) Producers of goods 
+C) Consumers of goods and services 
+D) Regulators of the economy 
+Question 2: What are the roles that the Government plays in the economic circular 
+f
+ low model? 
+A) Producer and Consumer 
+B) Moderator and Participant 
+C) Both Producer and Consumer & Moderator and Participant 
+D) None of these 
+Question 3: What kind of goods' demand decreases as income increases? 
+A) Superior Good 
+B) Inferior Good 
+C) Luxury Good 
+D) Supply Good 
+Question 4: For the data given, which function would you use to count the number 
+of salespeople who exceeded both their Q1 and Q2 quotas? 
+A) COUNT(A2:A5,"=Yes", C3:C5,"=Yes") 
+B) COUNTIFS(B2:B5,"=Yes", C2:C5,"=Yes") 
+C) COUNTIF(B2:B5,"=Yes", C2:C5,"=Yes") 
+D) COUNTA(C2:C5,"=Yes", D2:D5,"=Yes") 
+Question 5: Which of the following is a comprehensive data source that covers 
+every single household in a country? 
+A) Annual Survey of Industries 
+B) National Sample Survey 
+C) Census 
+D) Economic Census 
+Question 6: Which of the following is an example of a non-government data 
+source? 
+A) Economic Census 
+B) National Sample Survey 
+C) Center for Monitoring Indian Economy (CMIE) 
+D) Annual Survey of Industries 
+Question 7: The number of heavy vehicle driving licenses issued can be used as a 
+_____ of the potential market size for trucks. 
+A) Lead Indicator 
+B) Lag Indicator 
+C) Supplement Indicator 
+D) Surrogate Indicator 
+Question 8: Which of the following statements best describes the difference 
+between a niche market and a mass market? 
+A) A niche market targets a small, specific group of customers with specialized 
+needs, while a mass market targets a large, broad group of customers with general 
+needs. 
+B) A niche market involves offering lower-priced products to a wide audience, 
+whereas a mass market involves offering high-end products to a small, exclusive 
+group. 
+C) A niche market typically requires large-scale advertising campaigns to reach a 
+broad audience, while a mass market relies on word-of-mouth and targeted 
+marketing. 
+D) A niche market focuses on standard products that appeal to everyone, while a 
+mass market customizes products to fit individual customer preferences. 
+Question 9: What does ABC analysis primarily focus on? 
+A) Classifying inventory items based on their unit cost 
+B) Categorizing inventory items based on their reorder points 
+C) Grouping inventory items based on their annual monetary usage 
+D) Ranking inventory items based on their lead times 
+Question 10: Which of the following statements is not true about the benefits of 
+implementing an ERP system? 
+A) Increased data redundancy 
+B) Improved data accuracy and consistency 
+C) Increased process efficiency 
+D) Increased visibility into business operations 
+Question 11: Which of the following is typically not a component of the "job 
+description"? 
+A) Skills required for the job 
+B) Key responsibilities 
+C) Job performance indicators 
+D) Recruitment process 
+Question 12: PayLater has suddenly started running into losses. Which of the 
+following reasons can explain the sudden losses based on the graph shown? 
+A) Decrease in the declining rate of credit applications 
+B) Increase in the approval rate of credit applications 
+C) Both A and B 
+D) None of these 
+Question 13: Company Orange wants to recruit Software Engineers for its new 
+project. The hiring manager was tasked with choosing the appropriate hiring 
+channel. The manager collected previous hiring data (provided in the table below) 
+to help narrow down the appropriate channel. All channels advertised for the 
+vacant positions on the same day. Which channel has the worst selection success 
+rate? The Selection success rate is defined as the no. of candidates selected to the 
+no. of applications shortlisted. 
+Recruitmen
+ t Channels 
+Applicatio
+ n 
+Received 
+in 14 days 
+Applicatio
+ n 
+Shortliste
+ d 
+No. of 
+Candidates 
+appeared for 
+Interview 
+No. of 
+Candidat
+ es 
+Selected 
+Cost of 
+Advertisement for 
+14 Days (INR) 
+Employee 
+Referrals 
+40 32 24 12 120000 
+Direct 
+Company 
+Website 
+60 12 8 2 5000 
+Social and 
+Profession
+ al Media 
+260 36 16 4 20000 
+Hiring 
+Portals 
+220 90 30 6 100000 
+Print Ads 20 10 8 1 50000 
+ A) Hiring Portals 
+ B) Social and Professional Media 
+ C) Print Ads 
+ D) Employee Referrals 
+Question 14: When should an A/B test be done? 
+ A) After deploying the model in real world 
+ B) After training the model, before testing on test data 
+ C) Before training the model 
+ D) Before deploying the model in real world 
+ 
+Question 15: How do online payment companies make money? 
+ A) Interest from loans/credit 
+ B) Transaction fees (a small cut from the transaction) 
+ C) Monthly subscription 
+ D) Both A and B 
+ 
+Question 16: What role does personalized recommendation play in nudging 
+consumers on e-commerce sites? 
+A) To display clickbaits and flashy products to increase website traffic 
+B) To offer the same discounts to all customers, ensuring fairness 
+C) To suggest products based on browsing history, increasing the likelihood of 
+purchase 
+D) To highlight best-selling products only, irrespective of the user's interest 
+Question 17 
+Match the Following: 
+Column 1 
+Column 2 
+1. A form created by HR that outlines budget, skills, etc. a. Appraisal 
+2. Organization sources talent via employee 
+recommendations 
+3. Evaluating an employee's performance 
+4. Quick summary of job responsibilities 
+A) 1-b, 2-d, 3-a, 4-c 
+B) 1-d, 2-b, 3-c, 4-a 
+C) 1-a, 2-c, 3-b, 4-d 
+D) 1-c, 2-a, 3-d, 4-b 
+b. Indent 
+c. Job description 
+d. Employee 
+referral 
+Question 18: A customer makes a transaction through an online payments 
+platform 'PayKaro' using 'BCCI Bank Credit Card' in Klipkart to buy a shoe. Which of 
+the following is true chronologically? 
+A) Customer pays BCCI, BCCI pays Klipkart, Klipkart pays PayKaro 
+B) BCCI pays PayKaro, PayKaro pays Klipkart, Customer pays BCCI 
+C) Customer pays BCCI, BCCI pays PayKaro, PayKaro pays Klipkart 
+D) Customer pays PayKaro, PayKaro pays BCCI, BCCI pays Klipkart 
+Based on the data provided, answer the given subquestions. 
+SKU 
+Product 
+Unit 
+Monthly Sales 
+Avg. 
+Month
+ Openi
+ ng 
+Name Price ly 
+Sales 
+Stock 
+   1 2 3 4 5 6   
+LAP0
+ 01 
+NovaBook 
+Pro 
+$1,29
+ 9 
+100 12
+ 0 
+15
+ 0 
+18
+ 0 
+20
+ 0 
+22
+ 0 
+161.7 290 
+LAP0
+ 02 
+Stellar 15 $1,79
+ 9 
+80 90 10
+ 0 
+11
+ 0 
+12
+ 0 
+13
+ 0 
+105.0 250 
+LAP0
+ 03 
+QuantumBo
+ ok 16 
+$2,49
+ 9 
+50 60 70 80 90 10
+ 0 
+75.0 190 
+LAP0
+ 04 
+TitanBook 
+X1 Carbon 
+$1,99
+ 9 
+30 40 50 60 70 80 55.0 115 
+LAP0
+ 05 
+EclipseBook 
+x360 
+$1,49
+ 9 
+20 30 40 50 60 70 45.0 95 
+LAP0
+ 06 
+AuroraBook 
+Studio 
+$1,19
+ 9 
+10 15 20 25 30 35 22.5 50 
+LAP0
+ 07 
+ZephyrBook 
+17 
+$999 5 10 15 20 25 30 17.5 40 
+ 
+Question 19: Which SKU has the highest Days of Inventory? 
+ A) LAP002 
+ B) LAP003 
+ C) LAP006 
+ D) LAP007 
+ 
+Question 20: If the profit margin for the sale of a laptop is 10%, what is the total 
+profit earned from the sale of LAP005? 
+ A) 42,505 
+B) 40,890 
+C) 41,782 
+D) 40,473 
+Question 21: What percentage of total revenue do the SKUs LAP004 and LAP005 
+contribute together? 
+A) 10% 
+B) 20% 
+C) 15% 
+D) 25% 
+Question 22: What is the OEE for the Friday shifts? (express in terms of %, e.g., if 
+answer is 0.7359, express it as 73.59) 
+(This is a numeric answer question) 
+Question 23: What is the MAPE of the Thursday shifts? 
+A) 0.1 
+B) 0.15 
+C) 0.2 
+D) 0.25 
+Answer Key 
+1. c 
+2. b 
+3. b 
+4. c 
+5. c 
+6. d 
+7. a 
+8. c 
+9. a 
+10. d 
+11. c 
+12. a 
+13. a 
+14. d 
+15. c 
+16. a 
+17. b 
+18. b 
+19. d 
+20. b 
+21. 92.5 to 93.5 
+22. a 
+2024 Dec 
+Q1. In the context of economic flow, what do firms provide to households in exchange for 
+labour?  
+A. Services 
+B. Capital  
+C. Wages 
+D. Goods 
+Q2. Which Excel function can be used to search for a certain value from another table and 
+retrieve a reference value based on the original table data? 
+A. Sum 
+B. If 
+C. Linest 
+D. Vlookup 
+Q3. Which Excel function can be used to search for a certain value from another table and 
+retrieve a reference value based on the original table data? 
+A. Economic Census 
+B. Periodic Labour Force Survey (PLFS) 
+C. Purchasing Managers' Index (PMI) 
+D. National Sample Survey 
+Q4. What implication does a bimodal distribution in household transportation expenditure 
+data point to? 
+A. Most households spend a similar amount on transportation 
+B. There are two distinct groups of households based on transportation spending 
+C. Transportation expenditure is evenly distributed across all households 
+D. There is a negative correlation between income and transportation spending 
+Q5. Which of the following factors is most critical in determining the market potential for a 
+new product? 
+A. The size of the target market and percentage of potential customers interested in the 
+product. 
+B. Historical sale data of unrelated products. 
+C. Cost of production and distribution. 
+D. Current market share of existing products. 
+Q6. What does the Days of Sales of Inventory indicate? 
+A. The average number of days required by a company to turn its inventory into sales.  
+B. The number of days when inventory is zero in a year 
+C. Total number of days when inventory sales is zero due to lack of inventory 
+D. The average number of inventory stockout days in a month 
+Q7. Which of the following scenarios can be best expressed through a Bar chart? 
+A. Comparing expenditure trends of students. 
+B. Comparing no. of scooter owners, no of bike owners vis- a- vis no of car owners 
+C. Showing relationship between temperature and time of the day. 
+D. Analyzing correlation between no. of hours students study and their scores in exam  
+Q8. Which of the following is typically NOT performed when using a pivot table in data 
+analysis ? 
+A. Filtering data to display only specific records.  
+B. Creating new records in the original dataset. 
+C. Grouping data by categories or fields to analyze trends and patterns. 
+D. Summarizing data by aggregating values, such as sum, count, or average. 
+Q9. Swyft, a new taxi aggregator platform has developed a new recommendation engine 
+called “TinSage?” and they want to test the recommendation engine by doing an A/B test. 
+Can you identify the test and control groups? 
+A. Test: Random recommendation; Control: TinSage recommendation 
+B. Test: Old model recommendation; Control: TinSage recommendation 
+C. Test: TinSage recommendation; Control: Old model recommendation 
+D. Test: Old model recommendation; Control: Random recommendation 
+Q10. What is the primary goal of an A/B test? 
+A. Test the scalability of a model 
+B. Compare two or more versions of a product or model to identify the best performer 
+C. Measure hardware resource utilization 
+D. Validate the hypothesis using historical data 
+Q11. How do online payment companies make money? 
+A. Interest from loans/credit 
+B. Transaction fees (a small cut from the transaction) 
+C. Monthly subscription 
+D. Both Interest from loans/credit and transaction fees 
+Q12. A form created by HR that outlines the budgetary details, skills and capabilities 
+required etc. is called  
+A. Indent 
+B. Job Description 
+C. Employee Referral 
+D. Appraisal  
+Candidates 
+Year Of 
+Experience 
+Count Of Skill 
+Count Of Key 
+Projects 
+Duration in the 
+current Role 
+Partha 
+Siva 
+Akanksha 
+Lavanya 
+5.0 
+5.0 
+5.5 
+6.0 
+2 
+1 
+1 
+1 
+Composite Score= Sum of all criteria on the same scale 
+2 
+1 
+2 
+1 
+2 
+2 
+2 
+3 
+Q13. Rank the above candidates and choose the correct ranking from the below options  
+A. Partha > Akanksha > Lavanya > Siva 
+B. Akanksha > Lavanya > Siva> Partha 
+C. Partha < Akanksha < Lavanya < Siva 
+D. Akanksha < Lavanya < Siva< Partha 
+ 
+ 
+ 
+ 
+Q14. PePhone is a FinTech firm that processes payments. Following are sources of revenue 
+for the company – 3.5% of transaction amount as transaction fee from merchant for all types 
+of transactions (credit and debit), 18% p.a. interest on credit transactions and incurs a loss of 
+credit if not paid back. Calculate the overall profit for the company based on the below table – (Assume payback of credit in a year) Note: Declined transactions will not get credit but 
+customers will complete the payment through PePhone using their bank details. 
+ 
+ 
+ 
+Cust ID Date Of 
+Applicat
+ ion 
+Cust 
+Segmen
+ t 
+Applicat
+ ion 
+Credit 
+Score 
+Applicat
+ ion 
+Amount 
+Approve
+ d_VS_D
+ eclined 
+Decline 
+Reason 
+Paid 
+Back or 
+Defaulte
+ d 
+17289 26/03/21 LOW 588 168 approve
+ d 
+ Paid 
+back 
+17290 17/02/21 MID 635 109 approve
+ d 
+ defaulted 
+17291 23/02/21 HIGH 455 183 declined System 
+issue 
+NA 
+17292 20/02/21 MID 484 334 declined Credit 
+risk 
+NA 
+17293 05/02/21 MID 637 102 approve
+ d 
+ Defaulte
+ d 
+17294 11/01/21 MID 559 499 declined Credit 
+risk 
+NA 
+ 
+A. -167.50 
+B. -211.0 
+C. -197.74 
+D. -162.18 
+ 
+ 
+Based on the sample data answer the given subquestions.  
+ 
+PRODUCTS SALE AMOUNT 
+PRODUCT A 22,000 
+PRODUCT B 18,000 
+PRODUCT C 29,000 
+PRODUCT D 16,500 
+PRODUCT E 25,500 
+ 
+Q15. What is the market share of Product B as a percentage of total sale amount? 
+A. 17.5 
+B. 16.2 
+C. 18.2 
+D. 19.3 
+Q16. What percentage of total market share do products C and E hold together? 
+A. 29.8% 
+B. 44% 
+C. 39.8% 
+D. 49.1% 
+Company HiringSoft wants to recruit Software Engineers for its new project. The hiring 
+manager was tasked with choosing the appropriate hiring channel. The manager collected 
+previous hiring data (provided in the table below) to help narrow down the appropriate 
+channel. All channels advertised for the vacant positions on the same day. 
+Recruitment
+ s Channels 
+Application 
+Received in 
+14 days 
+Application 
+Shortlisted 
+No of 
+candidates 
+appeared for 
+interview 
+No of 
+candidates 
+selected 
+Cost of 
+Advertiseme
+ nt for 14 
+Days (INR) 
+Employee 
+Referrals 
+Direct 
+Company 
+Website 
+Social and 
+Professional 
+Media 
+Hiring 
+Portals 
+Prints AdS 
+40 
+60 
+260 
+220 
+20 
+32 
+12 
+36 
+90 
+10 
+24 
+8 
+16 
+30 
+8 
+Based on the above data, answer the given subquestions 
+12 
+2 
+4 
+6 
+1 
+120000 
+5000 
+20000 
+100000 
+50000 
+Q17. If the hiring manager has to go only with the parameter, cost per candidate selected, 
+which would be the most appropriate channel? 
+A. Direct Company Website 
+B. Print Ads 
+C. Employee Referrals 
+D. Social and Professional Media 
+Q18. Which channel has the worst selection success rate? The Selection success rate is 
+defined as the no. of candidates selected to the no. of applications shortlisted.  
+A. Hiring Portals 
+B. Social and Professional Media 
+C. Print Ads 
+D. Employee Referrals 
+Based on following data, answer the given subquestions:  
+Product 
+Name 
+Prod. ID Month 1 
+Sales 
+Month 2 
+Sales 
+Month 3 
+Sales 
+Unit Price 
+($) 
+Widget G SKU16 140 160 150 22 
+Widget H SKU17 95 105 100 30 
+Gadget K SKU18 210 230 220 50 
+Gadget L SKU19 65 75 70 45 
+Accessory U SKU20 50 60 55 35 
+Widget I SKU21 130 140 135 25 
+Gadget M SKU22 120 130 125 40 
+Accessory V SKU23 55 60 65 28 
+ 
+Q19. The total revenue of the firm is: 
+A. 97290  
+B. 98390 
+C. 96480 
+D. 97560 
+ 
+Q20. What is the ratio of Widget sale to that of Gadget Sales? 
+A. 0.51 
+B. 0.42 
+C. 0.35 
+D. 0.67 
+ 
+ 
+Q21. Which product has a linearly increasing trend of sales  
+A. Accessory V 
+B. Widget G  
+C. Accessory U 
+D. Gadget K 
+ 
+ 
+Based on the data in the table, Calculate the missing values X1, X2, X3 & X4  
+ 
+Planne
+ d 
+Product
+ ion  
+Time 
+(hrs) 
+Lost 
+Time 
+Actual 
+Machin
+ e 
+Speed 
+(units/hr
+ ) 
+Design 
+Machin
+ e 
+Speed 
+(units/hr
+ ) 
+Good 
+Units 
+Produc
+ ed 
+Availabi
+ lity (%) 
+Perform
+ ance 
+(%) 
+Quality 
+(%) 
+OEE(%
+ ) 
+8 X1 X2 200 1050 87.50% 90% X3 X4 
+ 
+Q22. Enter the value X1 _________ 
+ 
+Q23.Enter the value X2 __________ 
+ 
+Q24. Enter the value X3 __________ 
+ 
+Q25.  Enter the value X4 __________ 
+ 
+ANSWERS 
+1. C 
+2. D 
+3. C 
+4. B 
+5. A 
+6. A 
+7. B 
+8. B 
+9. C 
+10. B 
+11. D 
+12. A 
+13. A 
+14. A 
+15. B 
+16. D 
+17. A 
+18. A 
+19. A 
+20. A 
+21. A 
+22. 1 
+23. 180 
+24. 83 TO 83.5 
+25. 65 TO 65.75  
+2023 JAN 
+Q.1) Which of the following best describes the churn rate? 
+A. The number of new customers acquired in a given period 
+B. The percentage of customers who stop using a product or service in a 
+given period 
+C. The amount of money earned from a customer in a given period 
+D. The cost of acquiring a new customer 
+Q.2) Which of the following goods is likely to have the lowest marginal 
+utility? 
+A. A necessity good. 
+B. A luxury good. 
+C. A good that the consumer has never tried before. 
+D. A good that the consumer has consumed many times before. 
+Q.3) When does marginal utility become negative? 
+A. When a consumer consumes the first unit of a good. 
+B. When the total utility of a good is zero. 
+C. When the total utility of a good is at its maximum. 
+D. When the consumer reaches the point of overconsumption. 
+Q.4) If the price of a product increases by 20% and the quantity 
+demanded decreases by 10%, what is the price elasticity of demand? 
+A. 2 
+B. 0.5 
+C. 1 
+D. 1.5 
+Q.5) The current ratio is a measure of: 
+A. A company's ability to pay its long-term debt obligations. 
+B. A company's liquidity and short-term solvency. 
+C. A company's ability to generate profits. 
+D. A company's efficiency in managing its inventory. 
+Q.6) A Company has current assets of $750,000 and current liabilities of 
+$250,000. What is the current ratio of the company? 
+A. 3 
+B. 1 
+C. 1.5 
+D. 0.33 
+Q.7) A/B testing is used for: 
+A. Measuring the churn rate of a product 
+B. Comparing two versions of a product to determine which one performs 
+better 
+C. Increasing the price of a product to maximize revenue 
+D. Reducing the number of features of a product to make it simpler 
+Q.8) Consider the following graphical representation of the Average of 
+Credit Scores of Approved and Declined Credit Applications. Which of the 
+following statements stands TRUE? Statement A: The average of Credit 
+Scores of customers getting declined remains more or less constant 
+throughout the months Statement B: Average Credit Scores of customers 
+getting approved have increased over time Statement C: Average Credit 
+Scores of customers getting approved have decreased over time 
+Statement D: Grand Total Average has no correlation with whether the 
+decline rate reduces or increases 
+A. Statements A, B, and D are TRUE 
+B. Statements A, C, and D are TRUE 
+C. Only Statement C is TRUE, and A being TRUE is ambiguous. 
+D. Both Statements A and C are true 
+Q.9) Consider the following graph representing the volume sales through 
+an E-Commerce run distribution center through 15 days. Which among 
+the following explains Thursday's volume being more than the rest of the 
+days? Statement 1 : There was a Black Friday sale on Thursday 
+Statement 2 : It’s possible that Thursday’s data is the only day occouring 
+thrice among in the 15 day data Statement 3 : It is not possible to judge 
+trends with this less information Statement 4 : One of the thursdays 
+could be a public holiday/ online sale festival day 
+Based on the provided bar chart, here is the day-wise revenue data in a format 
+suitable for creating a bar chart in Google Docs or Sheets. 
+A. Statement 1 is correct 
+B. Statements 1,2,4 are correct 
+C. Statements 2,4 are correct 
+D. Statement 3 is correct 
+Q.10) There is a column containing multiple courses a student has 
+registered for like “BDM, TDS, BA, Python, English II” How can you 
+separate these courses/words into distinct cells like this: 
+From BDM, TDS, BA, Python, 
+English II 
+To 
+BDM 
+TDS 
+BA Python English II 
+A. Use the "Split" function in Excel/Google Sheets. 
+B. Use the "Find and Replace" feature in Excel/Google Sheets. 
+C. Use the "Wrap Text" feature in Excel/Google Sheets. 
+D. Use the "Text to Columns" feature in Excel/Google Sheets. 
+Q.11)Consider the following screenshot. Which among the following will 
+be the correct syntax to put in the formula box for cell I2? Consider a 
+situation where the company takes 2.5% as a commission on all 
+application amounts for processing the application. 
+ 
+A.  
+B.  
+C.  
+D.  
+ 
+ Calculate the given subquestion for Gear Broaching Process for Week 1 
+Parameters Week 1 
+No. of Shifts/ Day 3 
+No. of Working Days in the Week 6 
+No. of Hours/Shift 8 
+Number of Shifts lost due to maintenance 3 
+Designed Speed of Broaching Process (per hour) 60 
+Total Product Output 6243 
+Scrap (S) 501 
+Q.12) Availability - _______% (upto one decimal point) 
+Answer (Numeric): 
+ 
+Q.13) Performance ________% (upto one decimal point) 
+Answer (Numeric): 
+ 
+Q14) Quality ________% (upto one decimal point) 
+Answer (Numeric): 
+ 
+Q.15) OEE _______ (Enter a number between 0 and 1 up to 3 decimal 
+places) 
+Answer (Numeric): 
+ 
+ 
+Answer the given subquestions concerning the Hobbing process of gear 
+manufacturing. Total Output of Gear casts after Hobbing: 2600. Cost of 
+Hobbing: INR 33 per Gear cast, Raw Material Cost: INR 37 per Gear Cast 
+Week -1 
+Broachin
+ g Scraps 
+Shif
+ t 1 
+Shif
+ t 2 
+Shif
+ t 1 
+Shif
+ t 2 
+Shif
+ t 1 
+Shif
+ t 2 
+Shif
+ t 1 
+Shif
+ t 2 
+Shif
+ t 1 
+Shif
+ t 2 
+ 11 7 4 20 6 14 23 7 6 7 
+ 
+Q.16) Scrap Percentage after broaching process_______________% 
+Answer (Numeric): 
+ 
+Q.17)Loss due to scrap after broaching_______________ 
+Answer (Numeric): 
+ 
+ 
+ 
+Consider the following dataset: Here all the factors are “more the better” 
+. You can combine all the criteria as : Composite Score= Sum of all 
+criteria on the same scale Rank the above candidates and choose the 
+correct ranking from the below options 
+ 
+Candidates Year of 
+experience 
+Count 
+Skill 
+Count_key_projects Duration in 
+the current 
+role 
+Alpha 5.0 2 2 3 
+Beta 5.0 1 1 2 
+Gamma 5.5 1 2 2 
+Tango 6.0 1 1 3 
+A. Alpha > Tango > Gamma > Beta 
+B. Gamma > Tango > Beta> Alpha 
+C. Alpha < Gamma < Tango < Beta 
+D. Gamma < Tango < Beta< Alpha 
+ 
+ 
+Consider the following Volume Sales Data for 4 different SKUs. Analyze 
+and interpret - which of the following datasets qualifies the Volume 
+Pareto criteria? 
+ 
+TABLE A: 
+Product Name Volume Sales 
+Sony PlayStation 5 30000 
+Microsoft Xbox Series X 25000 
+Nintendo Switch OLED 20000 
+Sony PlayStation 4 17500 
+Microsoft Xbox One 15000 
+Nintendo Switch Lite 12500 
+Sony PlayStation 3 10000 
+Microsoft Xbox 360 8500 
+Nintendo Wii 6500 
+Nintendo Wii U 5000 
+TOTAL 150000 
+ 
+TABLE B: 
+Product Name Volume Sales 
+Chanel No. 5 25000 
+Dior J'adore 22000 
+Paco Rabanne 1 Million 19000 
+Armani Si 16500 
+Marc Jacobs Daisy 14000 
+Gucci Bloom 12000 
+Yves Saint Laurent Black Opium 10000 
+Dolce & Gabbana Light Blue 8000 
+Tom Ford Black Orchid 6500 
+Jo Malone Lime Basil & Mandarin 5000 
+TOTAL 138000 
+ 
+TABLE C: 
+Product Name Volume Sales 
+Nike Air Max 10000 
+Adidas Ultraboost 9500 
+Converse Chuck Taylor 8500 
+Vans Old Skool 7800 
+Reebok Classic 6900 
+Puma Suede 6200 
+New Balance 990 5800 
+Asics Gel-Lyte III 5300 
+Fila Disruptor 4700 
+Saucony Jazz Original 4100 
+TOTAL 68800 
+ 
+TABLE D: 
+Product Name Volume Sales 
+Apple iPhone 13 20000 
+Samsung Galaxy S21 18000 
+OnePlus 10 15000 
+Google Pixel 6 12000 
+Xiaomi Mi 12 10000 
+Oppo Find X4 
+Vivo X70 
+Realme GT Neo2 
+8000 
+6000 
+4500 
+Motorola Edge 20 
+LG V70 
+TOTAL 
+A. A 
+B. B 
+C. C 
+D. D 
+3500 
+2500 
+99500 
+Answers 
+1.  The percentage of customers who stop using a product or service in a 
+given period 
+2. A good that the consumer has consumed many times before. 
+3. When the consumer reaches the point of overconsumption. 
+4. 0.5 
+5. A company's liquidity and short-term solvency. 
+6. 3 
+7. Comparing two versions of a product to determine which one performs 
+better 
+8. Both Statements A and C are true 
+9. Statements 2,4 are correct 
+10. Use the "Text to Columns" feature in Excel/Google Sheets. 
+11. 82 to 84 
+12. 86 to 87.5 
+13. 91 to 93 
+14.  
+0.600 to 0.720 
+15. 4.02 to 4.06 
+16. 7150 to 7500 
+17. Alpha > Tango > Gamma > Beta 
+18. C 
+ 
+ 
+2023 May 
+ 
+Question 1: What does the "range_lookup" parameter in the VLOOKUP 
+function control? 
+A. The range of data in which the Vertical look-up function should operate on. 
+B. The search direction (up or down) for the lookup value. 
+C. Whether the function should perform a case-sensitive lookup. 
+D. Whether the function should perform an approximate or exact match lookup. 
+ 
+Question 2 : With the following data, determine which SKU has the minimum 
+Average Days of Inventory. 
+Stock Keeping Unit Open Stock in Warehouse Avg Daily Sales 
+A01 18.7 8.5 
+A02 31.2 6.3 
+A03 15.9 3.7 
+A04 12.4 2.9 
+ 
+A. A01 
+B. A02 
+C. A03 
+D. A04 
+ 
+Question 3 : Calculate the Overall Equipment Effectiveness (OEE) of the 
+Assembly Line Equipment for the month of July. 
+ 
+Parameters  
+Planned Production Hours (PPH) 400 
+Lost Time (LOT) 30 
+Designed Assembly Speed from Equipment (DA) per Hour 
+Actual Assembly Speed from Equipment (AA) per Hour 
+180 
+160 
+Total Units Assembled (TU) 
+Defective Units (DU) 
+Answer (Numeric): 
+8000 
+320 
+Question 4 : A company has 20 employees. In the last quarter, 5 employees 
+left, and 3 new employees were hired. What is the employee quarterly attrition 
+rate? ______________________% 
+Attrition rate (percentage)= [(Number of employee departures) / 
+(Average number of employees) ]×100 
+Answer (Numeric): 
+You oversee the inventory management of gear assemblies in a manufacturing 
+facility. The particulars of the inventory are as follows: Starting Inventory: 100 
+units Daily Usage: 5 units Lead Time: 10 days Safety Stock: 20 units Based on 
+the above data, answer the given subquestions. 
+Question5 : Based on this information, at what inventory level should you 
+trigger a re-order for gear assemblies? 
+A. Initiate a re-order when the inventory level drops to 70 units 
+B. Initiate a re-order when the inventory level drops to 50 units 
+C. Initiate a re-order when the inventory level drops to 30 units 
+D. Initiate a re-order when the inventory level drops to 15 units 
+Question 6: After how many days should you trigger a re-order 
+A. 17 Days 
+B. 14 Days 
+C. 10 Days 
+D. 6 Days 
+Question 7: In business analysis, the Pareto Principle is commonly used to: 
+A. Distribute resources evenly across all activities. 
+B. Focus efforts on a few vital factors that have the most significant impact. 
+C. Ignore data that doesn't follow the 80/20 distribution. 
+D. Achieve a perfect balance between inputs and outputs. 
+Question 8: Which of the following scenarios aligns with the principles of 
+Nudge economics? 
+A. A government bans the sale of sugary beverages. 
+B. A school provides nutritional information to students without altering 
+thecafeteria options. 
+C. A company uses aggressive advertising to persuade customers to buy 
+itsproducts. 
+D. A city imposes fines for not recycling. 
+Consider the following data set and answer the given suquestions. 
+Applicant 
+Applicant A 
+Applicant B 
+Applicant C 
+Applicant D 
+Applicant E 
+Income 
+($1000s) 
+50 
+30 
+40 
+25 
+Credit Score 
+720 
+680 
+Loan Amount ($1000s) 
+150 
+100 
+780 
+620 
+35 
+750 
+120 
+80 
+130 
+Question 9: Which applicant will face the most difficulty in repaying the loan? 
+A. Applicant A 
+B. Applicant B 
+C. Applicant C 
+D. Applicant D 
+E. Applicant E 
+Question 10: If any credit score of 700 and above is considered equally 
+acceptable, then which applicant is the most risky for the lender? 
+A. Applicant A 
+B. Applicant B 
+C. Applicant C 
+D. Applicant D 
+E. Applicant E 
+Question 11: For a loan amount of $120, which applicant has the lowest risk 
+level? 
+A. Applicant A 
+B. Applicant B 
+C. Applicant C 
+D. Applicant D 
+E. Applicant E 
+ 
+Question 12: A company is analyzing the effectiveness of different recruitment 
+channels for hiring new employees based on the number of applications 
+received, the number of candidates shortlisted, and the ease of applying 
+scores (on a scale of 1 (min) to 5 (max)) for each recruitment channel. Please 
+follow the instructions below to answer the question. Make your selection 
+based on your analysis of the effectiveness scores of the recruitment 
+channels. Instructions: - Normalize Ease of Applying Scores - Calculate 
+Effectiveness Score: Calculate the effectiveness score for each recruitment 
+channel by multiplying the ratio of shortlisted candidates to applications by 
+the normalized ease of applying score. - Rank the Channels: Rank the 
+recruitment channels based on their calculated effectiveness scores. The 
+higher the effectiveness score, the more effective the channel. Based on the 
+provided data and your calculated effectiveness scores, which recruitment 
+channel appears to be the most effective in terms of the ratio of shortlisted 
+candidates to applications and the ease of applying? 
+Recruitment 
+Channel 
+Applications Shortlisted Ease of Applying (Scale: 
+1-5) 
+Linkedin 120 30 4 
+Referrals 80 40 5 
+External Agency 150 20 3 
+Internal Sourcing 100 25 4 
+ 
+A. Linkedin 
+B. Referrals 
+C. External Agency 
+D. Internal Sourcing 
+ 
+Question 13: Rank the candidates based on the provided factors and choose 
+the correct ranking from the options below: Consider the following dataset: 
+Candidate Years of 
+Experience 
+Technical 
+Skills 
+Number of 
+Projects 
+Tenure in 
+Current Role 
+Rajesh 6.5 4 3 5 
+Priya 7 3 2 4 
+Aman 4 2 1 2 
+Sanya 5.5 3 2 3 
+ 
+A. Rajesh > Priya > Sanya > Aman 
+B. Priya > Aman > Sanya > Rajesh 
+C. Sanya > Aman > Priya > Rajesh 
+D. Aman > Sanya > Priya > Rajesh 
+ 
+Question 14: PayBuddy conducted an extensive A/B test to assess the impact 
+of a new Cashback Rewards program on customer spending behavior. The 
+control and test groups were carefully selected to ensure equal representation. 
+The table below provides a detailed breakdown of transaction data before and 
+after the introduction of the Cashback Rewards program. Based on the given 
+data, which of the following statements are true? [Select all that apply] 
+Group Average 
+number of 
+transactions 
+per customer 
+(Before 
+Program) 
+Average 
+transaction 
+amount ($) 
+(Before 
+Program) 
+Average 
+number of 
+transactions 
+per customer 
+(After 
+Program) 
+Average 
+transaction 
+amount ($) 
+(After 
+Program) 
+Control 10.5 85.2 11.2 87.6 
+Test 11.8 91.7 13.4 95.2 
+ 
+A. The new Cashback Rewards program significantly increased the 
+averagenumber of transactions for both control and test groups. 
+B. Both the control and test groups experienced a decrease in the 
+averagetransaction amount after the introduction of the Cashback Rewards 
+program. 
+C. The Cashback Rewards program had a more pronounced impact on 
+increasingthe average transaction amount in the test group compared to the 
+control group. 
+D. The average transaction amount decreased in the control group but 
+increasedin the test group after the introduction of the Cashback Rewards 
+program. 
+E. The increase in the average transaction amount was higher in the 
+controlgroup compared to the test group due to the Cashback Rewards 
+program. 
+Question 15: A cut in price from $1.50 to $1.20 sees demand for a product rise 
+by 10%. What would the price elasticity of demand be for this product? 
+Answer (Numeric): 
+Question 16: The price is changed from Rs 200 to Rs 150. The absolute value 
+of price elasticity of demand is 1.2. What is the ratio of the new and old 
+quantities sold? 
+Answer (Numeric): 
+Question 17: Using the data in table and figure below, match the curve in 
+column-A to its representative cost in column-B (assume all units produced 
+are sold)
+ Fixed Cost 
+(Rs.) 
+Variable 
+(Rs./ unit) 
+5000 
+5000 
+5000 
+5000 
+5000 
+0 
+20 
+40 
+45 
+Cost 
+Number 
+of 
+Produced (units) 
+0 
+200 
+Units 
+Selling 
+(Rs./ unit) 
+price 
+100 
+100 
+300 
+320 
+49 
+345 
+100 
+100 
+100 
+5000 
+Column-A 
+I. Curve-A 
+II. Curve-B 
+53 
+370 
+Column-B 
+a) Marginal cost 
+100 
+b) Marginal revenue 
+III. Curve-C 
+IV. None of the above  
+A. I-(a), II-(c), III-(b) 
+B. II-(a), I-(c), III-(b) 
+C. III-(a), II-(c), I-(b) 
+D. IV-(a), II-(c), III-(b) 
+c) Avg. total cost 
+ANSWER KEY 
+1. Whether the function should perform an approximate or exact match 
+lookup. 
+2. A01 
+3. Accepted Answer : 0.77 to 0.81 
+4. Accepted Answer : 25.5 to 27 
+5. Initiate a re-order when the inventory level drops to 70 units 
+6. 6 Days 
+7. Focus efforts on a few vital factors that have the most significant impact. 
+8. A school provides nutritional information to students without altering the 
+cafeteria options. 
+9. Applicant E 
+10. Applicant A 
+11. Applicant C 
+12. Referrals 
+13. Rajesh > Priya > Sanya > Aman 
+14. A,C 
+15. Accepted Answer : ["-0.5", "0.5"] 
+16. Accepted Answer : 1.25 to 1.35 
+17. IV-(a), II-(c), III-(b) 
+2023 SEPT 
+Question 1: To improve the given model which of the following preprocessing step 
+you suggest? 
+A. StandardScaler() 
+B. OrdinalEncoder() 
+C. MinMaxScaler() 
+D. LabelEncoder() 
+Question 2: What is the primary function of the circular flow of income in a market 
+economy? 
+A. Redistributing wealth equally among all citizens 
+B. Regulating the government's fiscal policy 
+C. Showing the flow of goods, services, and money between households and 
+firms 
+D. Controlling inflation rates in the market 
+Question 3: Which model represents a system where both government and private 
+firms operate together in economic activities? 
+A. Centralized economic model 
+B. Hybrid economic model 
+C. Market-based economic model 
+D. Decentralized economic model 
+Question4: What is the function of the "PivotTable" feature in Excel? 
+A. To perform complex calculations on selected data 
+B. To generate summary reports from large datasets 
+C. To create advanced graphs and charts 
+D. To split a worksheet into multiple panes for easier viewing 
+Question5: Which of the following accurately describes an advanced feature or 
+limitation of VLOOKUP in Excel? 
+A. VLOOKUP can handle multiple lookup values simultaneously within a single 
+formula. 
+B. VLOOKUP can perform approximate matches only when sorted in descending 
+order. 
+C. VLOOKUP is restricted to search within a single worksheet and cannot 
+reference data from other workbooks. 
+D. VLOOKUP requires the lookup column to be on the leftmost side of the lookup 
+range for accurate results. 
+Question6: What best describes the Economic Census conducted by the 
+government? 
+A. It is infrequent, covering every household in the country. 
+B. Conducted every five years to capture data from all households. 
+C. A sampling-based survey done every year to gather household information. 
+D. Conducted once every ten years, capturing data from every single household. 
+Question7: When would you most likely use a bar graph in Excel? 
+A. To display the frequency distribution of categorical data 
+B. To represent changes over time 
+C. To illustrate the parts of a whole 
+D. To show relationships between variables 
+Question8: The primary objective of stock management in e-commerce chiefly 
+focuses on: 
+A. Maximizing stockouts and overstock situations 
+B. Curbing customer satisfaction 
+C. Augmenting shipping costs 
+D. Mitigating stockouts and overstock predicaments 
+Question9:In the context of HR channel effectiveness calculation, what key metric 
+measures the cost incurred to attract and hire a single candidate through a specific 
+recruitment channel? 
+A. Time-to-Fill (TTF) ratio 
+B. Candidate Attrition rate 
+C. Cost-per-Hire (CPH) 
+D. Employee Engagement Index (EEI) 
+Question10: Which of the following best defines credit risk analysis? 
+A. Evaluating the potential financial loss due to market fluctuations 
+B. Assessing the possibility of default by borrowers 
+C. Determining the profitability of an investment 
+D. Analyzing currency exchange rates for international transactions 
+Question11: From the Figure, which quadrant products will be placed in the secure 
+area? 
+A. I & III 
+B. III & II 
+C. III & IV 
+D. Only II 
+Question12: Given the weights for skills, experience, and availability as 40%, 30%, 
+and 30% respectively, and the provided candidate data, what is the ranking order of 
+candidates from the highest to lowest based on their total normalized scores? 
+Availability is lower the better and Skills and Years are greater the better 
+A. Candidate C > Candidate A > Candidate E > Candidate B > Candidate D 
+B. Candidate C > Candidate A > Candidate B > Candidate E > Candidate D 
+C. Candidate C > Candidate B > Candidate D > Candidate E > Candidate A 
+D. Candidate C > Candidate E > Candidate B > Candidate A > Candidate D 
+Question13: Based on the provided dataset for credit risk analysis, which is the 
+correct sequence of customers when we consider risk levels being low to high? 
+A. 2,5,3,4,1 
+B. 1,4,2,3,5 
+C. 3,5,1,2,4 
+D. 1,4,3,5,2 
+Question14: Identify the labels for the following Reorder Point Graph correctly 
+A. A - Safety Stock; B - Lead Time, C - Reorder Point, D - Physical Receipt of 
+Order 
+B. A - Lead Time; B - Reorder Point; C - Physical Receipt of Order; D - Safety 
+Stock 
+C. A - Lead Time; B - Safety Stock, C - Reorder Point, D - Physical Receipt of 
+Order 
+D. A - Physical Receipt of Order; B - Reorder Point; C - Safety Stock; D - Lead 
+Time 
+Question15: What can be inferred about the relationship between income and the 
+demand for goods with fixed prices? [Select all that apply] 
+A. Demand might increase for some goods 
+B. Demand might decrease for some goods 
+C. Demand will increase for all goods 
+D. Demand will decrease for all goods 
+Question16: What brings about the change in the following scatter plot? 
+A. Formatting Legend 
+B. Increasing Data Points 
+C. Reducing the axis range 
+D. Eliminating the Outliers 
+Question17: Given the following data points, calculate the OEE and write in the text 
+box Hint: 
+OEE = Availability x Performance x Quality 
+• Planned Production Hours (PPH): 600 
+• Lost Time (LOT): 50 
+• Designed Assembly Speed from Equipment (DA) per Hour: 250 
+• Actual Assembly Speed from Equipment (AA) per Hour: 220 
+• Total Units Assembled (TU): 12000 
+• Defective Units (DU): 600 
+Write the number portion of the percentage. 
+Eg. if your calculations result in 0.2856 as the answer, please enter 28.56 and not 
+28.56%, or 0.2586 
+Possible Answers: 75.80 to 77.00 
+Question18: In terms of revenue generated, does this data follow the Pareto 
+Principle? 
+A. No, because the revenue generated by the first 2 products does not contribute 
+to 80% of the total revenue 
+B. No, because the top 20% percent products don't generate most of the revenue 
+for the company 
+C. Yes, because the revenue generated by the first 2 products - A&B contribute to 
+80% of the total revenue 
+D. Yes, because one single product in itself provides more than 80% revenue 
+E. No, because just one single product in itself provides more than 80% revenue 
+Question19: If the company has to define its star products and concentrate on 
+improving sales and prices of a pair of products based on their past performance - 
+which ones should they be? 
+A. Products F&B 
+B. Products D&J 
+C. Products C&J 
+D. Products E&G 
+Question20: The A/B test showed no statistically significant difference in conversion 
+rates between Groups A and B. What could be a possible reason for this outcome? 
+A. Inadequate sample size for Group A 
+B. Inconsistent distribution of device types across the groups 
+C. High variation in time spent on the website within each group 
+D. Similar conversion rates across different age groups in both groups 
+Question21:Which age group(s) displayed a statistically significant difference in 
+conversion rates between Groups A and B? 
+A. 18-25 years old in Group A 
+B. 26-35 years old in Group A 
+C. 36-45 years old in Group B 
+D. 46+ years old in both groups 
+Question22: If the average time spent on the website for Group B is higher than 
+Group A, what inference can be made regarding the new website layout? 
+A. The new layout is more effective for younger users 
+B. The new layout is likely causing user confusion 
+C. The new layout is less engaging for mobile users 
+D. The new layout might be driving more engagement (but not necessarily 
+conversions) 
+Question23: What can be inferred from the conversion rates of the 26-35 age group 
+in Groups A and B? 
+A. Group A has a higher conversion rate due to the new layout 
+B. Group B has a higher conversion rate due to the new layout 
+C. The new layout doesn't significantly impact this age group's conversion 
+D. There's not enough data to draw conclusions for this age group 
+ANSWERS 
+1. B 
+2. C 
+3. B 
+4. B 
+5. D 
+6. D 
+7. A 
+8. D 
+9. C 
+10. B 
+11. B 
+12. A 
+13. D 
+14. D 
+15. A,B 
+16. C,D 
+17. RANGE 75.80 TO 77 
+18. B 
+19. D 
+20. D 
+21. C 
+22. D 
+23. C 
+THE END 

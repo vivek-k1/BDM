@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h4>Add Question</h4>
+  <form method="post" class="mt-3">
+    <div class="mb-3">
+      <label class="form-label">Question Text</label>
+      <textarea class="form-control" name="text" rows="3" required>{{ (form.text if form else '') }}</textarea>
+    </div>
+    <div class="row g-2">
+      <div class="col-md-6">
+        <label class="form-label">Option A</label>
+        <input class="form-control" name="option_a" value="{{ (form.option_a if form else '') }}" required>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Option B</label>
+        <input class="form-control" name="option_b" value="{{ (form.option_b if form else '') }}" required>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Option C</label>
+        <input class="form-control" name="option_c" value="{{ (form.option_c if form else '') }}" required>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Option D</label>
+        <input class="form-control" name="option_d" value="{{ (form.option_d if form else '') }}" required>
+      </div>
+    </div>
+    <div class="row g-2 mt-2">
+      <div class="col-md-4">
+        <label class="form-label">Correct Answer</label>
+        <select class="form-select" name="answer" required>
+          <option value="">Choose...</option>
+          <option value="A" {% if form and form.answer=='A' %}selected{% endif %}>A</option>
+          <option value="B" {% if form and form.answer=='B' %}selected{% endif %}>B</option>
+          <option value="C" {% if form and form.answer=='C' %}selected{% endif %}>C</option>
+          <option value="D" {% if form and form.answer=='D' %}selected{% endif %}>D</option>
+        </select>
+      </div>
+      <div class="col-md-8">
+        <label class="form-label">Topic (optional)</label>
+        <input class="form-control" name="topic" value="{{ (form.topic if form else '') }}">
+      </div>
+    </div>
+    <div class="mt-3 d-flex gap-2">
+      <button type="submit" class="btn btn-primary">Add</button>
+      <a href="{{ url_for('main.index') }}" class="btn btn-outline-secondary">Cancel</a>
+    </div>
+  </form>
+{% endblock %}
+
+

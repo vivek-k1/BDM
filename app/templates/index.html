@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="d-flex align-items-center mb-3">
+    <h2 class="me-3 mb-0">{{ title or 'Questions' }}</h2>
+    <span class="badge bg-secondary">{{ questions|length }}</span>
+  </div>
+  {% if questions %}
+    <div class="list-group">
+      {% for q in questions %}
+        <a href="{{ url_for('main.question', q_id=loop.index) }}" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Q{{ loop.index }}. {{ q.text|truncate(100) }}</h5>
+            {% if q.topic %}<small class="text-muted">{{ q.topic }}</small>{% endif %}
+          </div>
+          <small class="text-muted">Options: A, B, C, D</small>
+        </a>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="text-muted">No questions found. Add one to get started.</p>
+  {% endif %}
+{% endblock %}
+
+

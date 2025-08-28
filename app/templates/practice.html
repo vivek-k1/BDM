@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="d-flex align-items-center mb-3">
+    <h2 class="me-3 mb-0">{{ title or 'Practice' }}</h2>
+    <span class="badge bg-secondary">{{ total }}</span>
+  </div>
+
+  <form method="post">
+    {% for q in questions %}
+      {% set q_index = loop.index %}
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Q{{ q_index }}. {{ q.text }}</h5>
+          {% if q.topic %}<small class="text-muted d-block mb-2">{{ q.topic }}</small>{% endif %}
+          <div class="list-group">
+            {% for key, val in q.options.items() %}
+              {% set selected = results.get(q_index, {}).get('selected') if results else None %}
+              {% set is_correct = results.get(q_index, {}).get('is_correct') if results else None %}
+              {% set correct = results.get(q_index, {}).get('correct') if results else None %}
+              {% set active = selected == key %}
+              <label class="list-group-item d-flex align-items-center justify-content-between">
+                <span>
+                  <input class="form-check-input me-2" type="radio" name="ans_{{ q_index }}" value="{{ key }}" {% if active %}checked{% endif %} required>
+                  <strong>{{ key }}.</strong> {{ val }}
+                </span>
+                {% if selected is not none %}
+                  {% if correct and key == correct %}
+                    <span class="badge bg-success">Answer</span>
+                  {% elif active and is_correct is not true %}
+                    <span class="badge bg-danger">Your choice</span>
+                  {% endif %}
+                {% endif %}
+              </label>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+
+    <div class="d-flex gap-2">
+      <button type="submit" class="btn btn-primary">Submit All</button>
+      <a href="{{ url_for('main.index') }}" class="btn btn-outline-secondary">Back</a>
+      {% if score is not none %}
+        <span class="ms-auto align-self-center">Score: <strong>{{ score }}</strong> / {{ total }}</span>
+      {% endif %}
+    </div>
+  </form>
+{% endblock %}

@@ -1,0 +1,651 @@
+{
+  "questions": [
+    {
+      "text": "What does the law of demand state?",
+      "options": {
+        "A": "As the price of a good increases, quantity demanded increases",
+        "B": "As the price of a good decreases, the quantity demanded decreases",
+        "C": "As the price of a good increases, the quantity supplied decreases",
+        "D": "As the price of a good decreases, the quantity demanded increases"
+      },
+      "answer": "D",
+      "topic": "Set 1 Q1 - Demand"
+    },
+    {
+      "text": "Which distinguishes an inferior good in relation to income?",
+      "options": {
+        "A": "Demand increases with rising income",
+        "B": "Demand decreases as income increases",
+        "C": "Demand remains unaffected by income changes",
+        "D": "It has no substitutes in the market"
+      },
+      "answer": "B",
+      "topic": "Set 1 Q2 - Inferior goods"
+    },
+    {
+      "text": "In microeconomics, when does marginal utility become negative?",
+      "options": {
+        "A": "When consuming the first unit of a good",
+        "B": "When total utility is zero",
+        "C": "When total utility is at its maximum",
+        "D": "When the consumer reaches overconsumption"
+      },
+      "answer": "D",
+      "topic": "Set 1 Q3 - Utility"
+    },
+    {
+      "text": "If the price of a product increases by 15% and quantity demanded decreases by 5%, what is the price elasticity of demand?",
+      "options": {
+        "A": "3",
+        "B": "0.33",
+        "C": "1",
+        "D": "0.5"
+      },
+      "answer": "B",
+      "topic": "Set 1 Q4 - Elasticity"
+    },
+    {
+      "text": "What does Days of Sales of Inventory indicate?",
+      "options": {
+        "A": "The average number of days to turn inventory into sales",
+        "B": "The number of days when inventory is zero in a year",
+        "C": "Total days when sales are zero due to lack of inventory",
+        "D": "Average inventory stockout days in a month"
+      },
+      "answer": "A",
+      "topic": "Set 1 Q5 - Inventory"
+    },
+    {
+      "text": "Which Excel function searches for a value in another table and retrieves a reference value?",
+      "options": {
+        "A": "SUM",
+        "B": "IF",
+        "C": "LINEST",
+        "D": "VLOOKUP"
+      },
+      "answer": "D",
+      "topic": "Set 1 Q6 - Excel"
+    },
+    {
+      "text": "In a saturated market where 60% of users want to upgrade devices soon, and new users are stable, what should manufacturers prioritize?",
+      "options": {
+        "A": "Expand to untapped regions",
+        "B": "Target specific demographics like age groups",
+        "C": "Invest in R&D for innovative features",
+        "D": "Develop upgrade incentives for current users"
+      },
+      "answer": "D",
+      "topic": "Set 1 Q7 - Strategy"
+    },
+    {
+      "text": "Which metric is key to monitor in an A/B test?",
+      "options": {
+        "A": "Total users tested",
+        "B": "System uptime",
+        "C": "Experiment-specific KPIs",
+        "D": "Model training time"
+      },
+      "answer": "C",
+      "topic": "Set 1 Q8 - A/B testing"
+    },
+    {
+      "text": "If a FinTech company wants to reduce losses, what should they do?",
+      "options": {
+        "A": "Decrease credit score approval cutoff",
+        "B": "Increase interest rates",
+        "C": "Increase loan approval limits",
+        "D": "Increase credit score approval cutoff"
+      },
+      "answer": "D",
+      "topic": "Set 1 Q9 - FinTech risk"
+    },
+    {
+      "text": "PayBuddy ran an A/B test on a new recommendation strategy. Based on the table, which statements are true? (i) Credit transactions increased; (ii) Debit increased; (iii) Both increased; (iv) Credit decreased; (v) Debit decreased.\nTreatment: Credit 1800$, Debit 2700$ | Control: Credit 1750$, Debit 2800$",
+      "options": {
+        "A": "(i) and (v)",
+        "B": "Only (iii)",
+        "C": "Only (i)",
+        "D": "(iv) and (ii)"
+      },
+      "answer": "A",
+      "topic": "Set 1 Q10 - A/B interpretation"
+    },
+    {
+      "text": "In the PayBuddy FinTech case, how do online payment companies primarily make money?",
+      "options": {
+        "A": "Interest from loans/credit",
+        "B": "Transaction fees",
+        "C": "Monthly subscriptions",
+        "D": "Both A and B"
+      },
+      "answer": "D",
+      "topic": "Set 1 Q11 - Monetization"
+    },
+    {
+      "text": "Calculate overall profit for PePhone FinTech (3.5% transaction fee, 18% p.a. interest on credit, loss on defaults; 1-year payback). Data: (1) 200 Approved Paid; (2) 150 Approved Default; (3) 250 Declined; (4) 300 Declined; (5) 120 Approved Default (refer to pdf)",
+      "options": {
+        "A": "-150.0",
+        "B": "-180.5",
+        "C": "-195.2",
+        "D": "-210.0"
+      },
+      "answer": "B",
+      "topic": "Set 1 Q12 - Profit calc"
+    },
+    {
+      "text": "What is the primary purpose of maintaining a bench of employees in IT services?",
+      "options": {
+        "A": "For unforeseen project needs",
+        "B": "To reduce payroll expenses",
+        "C": "To comply with HR standards",
+        "D": "To keep underperformers off projects"
+      },
+      "answer": "A",
+      "topic": "Set 1 Q13 - HR bench"
+    },
+    {
+      "text": "Rank candidates for a Software Engineer role (equal weights; more skills/certificates/experience better; fewer join days better). Candidates: A(10,25,4,4), B(12,40,3,5), C(9,15,6,6), D(11,20,5,3)",
+      "options": {
+        "A": "C < A < B < D",
+        "B": "C > B > A > D",
+        "C": "A > C > D > B",
+        "D": "B > C > A > D"
+      },
+      "answer": "A",
+      "topic": "Set 1 Q14 - Ranking"
+    },
+    {
+      "text": "In the Fabmart E-Commerce case, what does a bimodal distribution in expenditure data suggest?",
+      "options": {
+        "A": "Similar spending across households",
+        "B": "Two distinct household groups by spending",
+        "C": "Even distribution",
+        "D": "Negative income-spending correlation"
+      },
+      "answer": "B",
+      "topic": "Set 1 Q15 - Distribution"
+    },
+    {
+      "text": "Based on the table, what is the total revenue? Widget X (100,120,110) at 20; Gadget Y (80,90,85) at 30",
+      "options": {
+        "A": "10,500",
+        "B": "11,200",
+        "C": "10,950",
+        "D": "11,500"
+      },
+      "answer": "C",
+      "topic": "Set 1 Q16 - Revenue"
+    },
+    {
+      "text": "Which product has a continuously increasing sales trend? Widget X (100,120,110), Gadget Y (80,90,85)",
+      "options": {
+        "A": "Widget X",
+        "B": "Gadget Y",
+        "C": "Neither",
+        "D": "Both"
+      },
+      "answer": "B",
+      "topic": "Set 1 Q17 - Trend"
+    },
+    {
+      "text": "In Ace Gears manufacturing, what is a strategic advantage of internal sourcing? (Select all that apply)",
+      "options": {
+        "A": "Eliminates external recruitment",
+        "B": "Guarantees 100% success",
+        "C": "Speeds up staffing",
+        "D": "Reduces incompetence risk"
+      },
+      "answer": "C",
+      "topic": "Set 1 Q18 - Sourcing (choose primary)"
+    },
+    {
+      "text": "OEE calc: Planned 8 hrs, Availability 85% -> What is Lost Time (hrs)?",
+      "options": {
+        "A": "0.8",
+        "B": "1.0",
+        "C": "1.2",
+        "D": "1.4"
+      },
+      "answer": "C",
+      "topic": "Set 1 Q19 - OEE"
+    },
+    {
+      "text": "OEE calc: Performance 88% and Design Speed 200 -> Actual Speed?",
+      "options": {
+        "A": "160",
+        "B": "172",
+        "C": "176",
+        "D": "184"
+      },
+      "answer": "C",
+      "topic": "Set 1 Q20 - OEE"
+    },
+    {
+      "text": "OEE calc: Quality (%) approximates? (Given Good Units 1000 and typical scrap)",
+      "options": {
+        "A": "78%",
+        "B": "81%",
+        "C": "84%",
+        "D": "87%"
+      },
+      "answer": "B",
+      "topic": "Set 1 Q21 - OEE Quality"
+    },
+    {
+      "text": "Overall OEE (%) approximates? (Availability 85%, Performance 88%, Quality ~81%)",
+      "options": {
+        "A": "58%",
+        "B": "61%",
+        "C": "64%",
+        "D": "67%"
+      },
+      "answer": "B",
+      "topic": "Set 1 Q22 - OEE Overall"
+    },
+    {
+      "text": "In industry analysis, what does Porter's five forces help with?",
+      "options": {
+        "A": "Firm profitability ratios",
+        "B": "Competitive positioning",
+        "C": "Inventory management",
+        "D": "Consumer surveys"
+      },
+      "answer": "B",
+      "topic": "Set 1 Q23 - Porter"
+    },
+
+    {
+      "text": "In economic flow, what role do households play?",
+      "options": {
+        "A": "Suppliers of capital",
+        "B": "Producers of goods",
+        "C": "Consumers of goods/services",
+        "D": "Regulators"
+      },
+      "answer": "C",
+      "topic": "Set 2 Q1 - Flow"
+    },
+    {
+      "text": "What roles does government play in circular flow?",
+      "options": {
+        "A": "Producer and Consumer",
+        "B": "Moderator and Participant",
+        "C": "Both",
+        "D": "None"
+      },
+      "answer": "C",
+      "topic": "Set 2 Q2 - Flow"
+    },
+    {
+      "text": "For data, which function counts cells meeting a condition?",
+      "options": {
+        "A": "COUNT",
+        "B": "COUNTA",
+        "C": "COUNTIF",
+        "D": "COUNTSUM"
+      },
+      "answer": "C",
+      "topic": "Set 2 Q3 - Excel"
+    },
+    {
+      "text": "Which is a comprehensive data source covering all households?",
+      "options": {
+        "A": "Annual Survey of Industries",
+        "B": "National Sample Survey",
+        "C": "Census",
+        "D": "Economic Census"
+      },
+      "answer": "C",
+      "topic": "Set 2 Q4 - Data sources"
+    },
+    {
+      "text": "How does increased ordering cost affect EOQ?",
+      "options": {
+        "A": "Increases EOQ",
+        "B": "Decreases EOQ",
+        "C": "No effect",
+        "D": "Fluctuates"
+      },
+      "answer": "A",
+      "topic": "Set 2 Q5 - EOQ"
+    },
+    {
+      "text": "What is the anchoring effect as a nudge in E-Commerce?",
+      "options": {
+        "A": "High initial price next to sale price",
+        "B": "Flat discounts",
+        "C": "Expensive items only",
+        "D": "Lowest prices always"
+      },
+      "answer": "A",
+      "topic": "Set 2 Q6 - Nudge"
+    },
+    {
+      "text": "In PayBuddy case, why offer BNPL without fees?",
+      "options": {
+        "A": "Tax benefits",
+        "B": "Increase engagement/loyalty",
+        "C": "Retroactive fees",
+        "D": "Regulatory attention"
+      },
+      "answer": "B",
+      "topic": "Set 2 Q7 - BNPL"
+    },
+    {
+      "text": "How does seasonal sales pattern influence inventory?",
+      "options": {
+        "A": "Uniform increase",
+        "B": "Adjust based on historical data",
+        "C": "Reduce in peaks",
+        "D": "Ignore for simplicity"
+      },
+      "answer": "B",
+      "topic": "Set 2 Q8 - Inventory"
+    },
+    {
+      "text": "What benefits homogeneous regions in surveys?",
+      "options": {
+        "A": "Diversity by mixing",
+        "B": "Reduces bias via similar characteristics",
+        "C": "Urban focus",
+        "D": "High-income priority"
+      },
+      "answer": "B",
+      "topic": "Set 2 Q9 - Sampling"
+    },
+    {
+      "text": "In strategic manpower, least relevant for employee needs?",
+      "options": {
+        "A": "Industry turnover",
+        "B": "Predicted revenue",
+        "C": "Business objectives",
+        "D": "Unemployment rate"
+      },
+      "answer": "D",
+      "topic": "Set 2 Q10 - Manpower"
+    },
+    {
+      "text": "Match: 1. HR form for budget/skills (Indent); 2. Employee recommendations (Referral); 3. Performance eval (Appraisal).",
+      "options": {
+        "A": "1-Appraisal, 2-Indent, 3-Referral",
+        "B": "1-Indent, 2-Referral, 3-Appraisal",
+        "C": "1-Referral, 2-Appraisal, 3-Indent",
+        "D": "None"
+      },
+      "answer": "B",
+      "topic": "Set 2 Q11 - HR matching"
+    },
+    {
+      "text": "In FinTech, chronological flow for transaction: Customer → Bank → Platform → Merchant.",
+      "options": {
+        "A": "Customer pays Bank, Bank pays Merchant, Merchant pays Platform",
+        "B": "Bank pays Platform, Platform pays Merchant, Customer pays Bank",
+        "C": "Customer pays Bank, Bank pays Platform, Platform pays Merchant",
+        "D": "Customer pays Platform, Platform pays Bank, Bank pays Merchant"
+      },
+      "answer": "C",
+      "topic": "Set 2 Q12 - Flow"
+    },
+    {
+      "text": "Which channel has worst selection success rate (selected/shortlisted)?",
+      "options": {
+        "A": "Hiring Portals",
+        "B": "Social Media",
+        "C": "Print Ads",
+        "D": "Referrals"
+      },
+      "answer": "A",
+      "topic": "Set 2 Q13 - HR channels"
+    },
+    {
+      "text": "When to do A/B test?",
+      "options": {
+        "A": "After deployment",
+        "B": "After training, before test data",
+        "C": "Before training",
+        "D": "Before deployment"
+      },
+      "answer": "D",
+      "topic": "Set 2 Q14 - A/B timing"
+    },
+    {
+      "text": "Personalized recommendations nudge by?",
+      "options": {
+        "A": "Clickbaits",
+        "B": "Same discounts",
+        "C": "Browsing history suggestions",
+        "D": "Best-sellers only"
+      },
+      "answer": "C",
+      "topic": "Set 2 Q15 - Personalization"
+    },
+    {
+      "text": "Which SKU has highest Days of Inventory? (Based on a similar table)",
+      "options": {
+        "A": "LAP001",
+        "B": "LAP003",
+        "C": "LAP005",
+        "D": "LAP007"
+      },
+      "answer": "D",
+      "topic": "Set 2 Q16 - DoI"
+    },
+    {
+      "text": "Profit from LAP002 if 12% margin?",
+      "options": {
+        "A": "150000",
+        "B": "136000",
+        "C": "41000",
+        "D": "120000"
+      },
+      "answer": "B",
+      "topic": "Set 2 Q17 - Profit"
+    },
+    {
+      "text": "% revenue from LAP003 and LAP004?",
+      "options": {
+        "A": "15%",
+        "B": "20%",
+        "C": "25%",
+        "D": "30%"
+      },
+      "answer": "C",
+      "topic": "Set 2 Q18 - Revenue share"
+    },
+    {
+      "text": "OEE for shifts (approximate)?",
+      "options": {
+        "A": "83%",
+        "B": "86%",
+        "C": "89%",
+        "D": "92%"
+      },
+      "answer": "B",
+      "topic": "Set 2 Q19 - OEE"
+    },
+    {
+      "text": "MAPE for shifts?",
+      "options": {
+        "A": "0.10",
+        "B": "0.15",
+        "C": "0.20",
+        "D": "0.25"
+      },
+      "answer": "B",
+      "topic": "Set 2 Q20 - MAPE"
+    },
+    {
+      "text": "In industry, what does PMI indicate?",
+      "options": {
+        "A": "Household consumption",
+        "B": "Manufacturing activity",
+        "C": "Firm ratios",
+        "D": "Elasticity"
+      },
+      "answer": "B",
+      "topic": "Set 2 Q21 - PMI"
+    },
+    {
+      "text": "What does the law of demand state?",
+      "options": {
+        "A": "As the price of good inc, quantity demanded increases",
+        "B": "As the price of a good decreases, the quantity demanded decreases",
+        "C": "As the price of a good increases, the quantity supplied decreases",
+        "D": "As the price of a good decreases, the quantity supplied increases"
+      },
+      "answer": "A",
+      "topic": "2025 Jan Q1"
+    },
+    {
+      "text": "Which function would you use to count the number of cells that meet a specific condition?",
+      "options": {"A": "COUNT", "B": "COUNTA", "C": "COUNTIF", "D": "COUNTSUM"},
+      "answer": "C",
+      "topic": "2025 Jan Q2"
+    },
+    {
+      "text": "In a saturated smartphone market where 70% plan upgrades soon and new users unchanged, what should manufacturers prioritize?",
+      "options": {
+        "A": "Expand distribution to untapped regions",
+        "B": "Focus on females",
+        "C": "Invest in R&D for new customers",
+        "D": "Develop targeted upgrade incentives for current users"
+      },
+      "answer": "D",
+      "topic": "2025 Jan Q3"
+    },
+    {
+      "text": "What does the Days of Sales of Inventory indicate?",
+      "options": {
+        "A": "The average number of days required to turn inventory into sales",
+        "B": "Days when inventory is zero in a year",
+        "C": "Days when sales are zero due to lack of inventory",
+        "D": "Average inventory stockout days in a month"
+      },
+      "answer": "A",
+      "topic": "2025 Jan Q4"
+    },
+    {
+      "text": "Which factor is most critical for market potential of a new product?",
+      "options": {
+        "A": "Size of target market and share interested",
+        "B": "Historical sales of unrelated products",
+        "C": "Cost of production and distribution",
+        "D": "Current market share of existing products"
+      },
+      "answer": "A",
+      "topic": "2025 Jan Q5"
+    },
+    {
+      "text": "Which metric is most important to monitor during an A/B test?",
+      "options": {"A": "Total users", "B": "Uptime", "C": "KPIs specific to the experiment", "D": "Model training time"},
+      "answer": "C",
+      "topic": "2025 Jan Q6"
+    },
+    {
+      "text": "Arrange steps for unstructured data ranking modeling:",
+      "options": {
+        "A": "I -> II -> III -> IV",
+        "B": "II -> I -> IV -> III",
+        "C": "I -> II -> I -> IV -> III",
+        "D": "I -> II -> I -> III -> IV"
+      },
+      "answer": "B",
+      "topic": "2025 Jan Q7 (I:Normalizing, II:Preprocessing, III:Ranking, IV:Composite score)"
+    },
+    {
+      "text": "If a FinTech company wants to cut down losses, what should they do?",
+      "options": {
+        "A": "Decrease approval cutoff",
+        "B": "Increase interest rate",
+        "C": "Increase approval limit",
+        "D": "Increase approval cutoff"
+      },
+      "answer": "D",
+      "topic": "2025 Jan Q8"
+    },
+    {
+      "text": "PayBuddy A/B: Treatment Credit 1725, Debit 2780; Control Credit 1810, Debit 2679. Which statements are true? (i) Credit increased (ii) Debit increased (iii) Both increased (iv) Credit decreased (v) Debit decreased",
+      "options": {"A": "(i) & (v)", "B": "Only (iii)", "C": "Only (i)", "D": "(ii) & (iv)", "E": "Only (v)"},
+      "answer": "D",
+      "topic": "2025 Jan Q9"
+    },
+    {
+      "text": "PePhone profit calc with given table (3.5% fee, 18% interest on credit, loss on defaults; declined complete; 1y).",
+      "options": {"A": "-211.0", "B": "-192.72", "C": "-131.94", "D": "-162.18"},
+      "answer": "B",
+      "topic": "2025 Jan Q10"
+    },
+    {
+      "text": "Which conditions can use weighted average to analyze expenditure?",
+      "options": {"A": "Importance of categories", "B": "Population size of regions", "C": "Adjusting for inflation", "D": "Impact of income levels"},
+      "answer": "A,B",
+      "topic": "2025 Jan Q11 (multi-select)"
+    },
+    {
+      "text": "Excel SUBTOTAL on filtered data: which is correct?",
+      "options": {
+        "A": "Only sum; ignores hidden rows",
+        "B": "Performs many calcs; ignores rows hidden by filters",
+        "C": "Works only on manually hidden rows",
+        "D": "Works across any sheet regardless of visibility"
+      },
+      "answer": "B",
+      "topic": "2025 Jan Q12"
+    },
+    {
+      "text": "Income change table: percentage change in total revenue when income rises 15k -> 25k",
+      "options": {"A": "41.2%", "B": "42%", "C": "42.5%", "D": "41.8%"},
+      "answer": "A",
+      "topic": "2025 Jan Q13"
+    },
+    {
+      "text": "Type of goods based on table (income up, price slightly down, quantity up)",
+      "options": {"A": "Normal Goods", "B": "Inferior Goods", "C": "Luxury Goods", "D": "None"},
+      "answer": "A",
+      "topic": "2025 Jan Q14"
+    },
+    {
+      "text": "Total revenue from product table",
+      "options": {"A": "67125", "B": "66895", "C": "65285", "D": "67565"},
+      "answer": "A",
+      "topic": "2025 Jan Q15"
+    },
+    {
+      "text": "Which product has a continuously increasing trend?",
+      "options": {"A": "Gadget X", "B": "Widget A", "C": "Widget C", "D": "Gadget Q"},
+      "answer": "C",
+      "topic": "2025 Jan Q16"
+    },
+    {
+      "text": "What percentage of total revenue do Widgets contribute?",
+      "options": {"A": "30.1%", "B": "42.4%", "C": "25.6%", "D": "35.5%"},
+      "answer": "A",
+      "topic": "2025 Jan Q17"
+    },
+    {
+      "text": "OEE table: find X1 (lost time hrs)",
+      "options": {"A": "1", "B": "1.2", "C": "1.4", "D": "1.6"},
+      "answer": "A",
+      "topic": "2025 Jan Q18"
+    },
+    {
+      "text": "OEE table: find X2 (actual speed)",
+      "options": {"A": "176", "B": "180", "C": "184", "D": "172"},
+      "answer": "B",
+      "topic": "2025 Jan Q19"
+    },
+    {
+      "text": "OEE table: Quality % (approx)",
+      "options": {"A": "83 to 83.5", "B": "80 to 82", "C": "85 to 86", "D": "78 to 79"},
+      "answer": "A",
+      "topic": "2025 Jan Q20"
+    },
+    {
+      "text": "OEE table: Overall OEE % (approx)",
+      "options": {"A": "65 to 65.75", "B": "60 to 62", "C": "70 to 72", "D": "55 to 58"},
+      "answer": "A",
+      "topic": "2025 Jan Q21"
+    }
+  ]
+}
+

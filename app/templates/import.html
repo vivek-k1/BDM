@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h4>Bulk Import Questions (JSON)</h4>
+  <p class="text-muted">Paste a JSON array of questions or an object with a "questions" array. Each question should have fields: text, options {A,B,C,D}, optional answer (A-D), optional topic.</p>
+  <form method="post">
+    <div class="mb-3">
+      <textarea name="payload" class="form-control" rows="12">{{ payload or '' }}</textarea>
+    </div>
+    <div class="d-flex gap-2">
+      <button type="submit" class="btn btn-primary">Import</button>
+      <a href="{{ url_for('main.index') }}" class="btn btn-outline-secondary">Cancel</a>
+    </div>
+  </form>
+{% endblock %}
