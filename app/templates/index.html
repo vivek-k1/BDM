@@ -1,5 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
+  <!-- Best Notes Link - Large and Prominent -->
+  <div class="text-center mb-5 p-4 bg-primary text-white rounded-3">
+    <h1 class="display-4 fw-bold mb-3">📚 Best Notes</h1>
+    <p class="lead mb-4">Comprehensive study materials and insights</p>
+    <a href="https://medium.com/@vivek05/" target="_blank" class="btn btn-light btn-lg px-5 py-3 fw-bold fs-3">
+      🌟 Read Best Notes Here 🌟
+    </a>
+  </div>
+
   <div class="d-flex align-items-center mb-3">
     <h2 class="me-3 mb-0">{{ title or 'Questions' }}</h2>
     <span class="badge bg-secondary">{{ questions|length }}</span>
