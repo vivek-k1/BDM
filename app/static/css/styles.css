@@ -125,6 +125,81 @@ body {
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
 }
 
+/* Professional Links Section */
+.professional-links-section {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.professional-links-section h3 {
+  color: var(--dark-color);
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.professional-links-section .btn {
+  border-radius: var(--border-radius);
+  transition: all 0.3s ease;
+  border: none;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  color: white;
+}
+
+.professional-links-section .btn:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  color: white;
+}
+
+.btn-linkedin {
+  background: linear-gradient(135deg, #0077b5 0%, #005885 100%);
+  box-shadow: 0 4px 15px rgba(0, 119, 181, 0.3);
+}
+
+.btn-linkedin:hover {
+  background: linear-gradient(135deg, #005885 0%, #004066 100%);
+  box-shadow: 0 8px 25px rgba(0, 119, 181, 0.4);
+}
+
+.btn-instagram {
+  background: linear-gradient(135deg, #e4405f 0%, #c13584 100%);
+  box-shadow: 0 4px 15px rgba(228, 64, 95, 0.3);
+}
+
+.btn-instagram:hover {
+  background: linear-gradient(135deg, #c13584 0%, #a01d6f 100%);
+  box-shadow: 0 8px 25px rgba(228, 64, 95, 0.4);
+}
+
+.btn-github {
+  background: linear-gradient(135deg, #333 0%, #24292e 100%);
+  box-shadow: 0 4px 15px rgba(51, 51, 51, 0.3);
+}
+
+.btn-github:hover {
+  background: linear-gradient(135deg, #24292e 0%, #1a1e22 100%);
+  box-shadow: 0 8px 25px rgba(51, 51, 51, 0.4);
+}
+
+.btn-medium {
+  background: linear-gradient(135deg, #00ab6c 0%, #008f5a 100%);
+  box-shadow: 0 4px 15px rgba(0, 171, 108, 0.3);
+}
+
+.btn-medium:hover {
+  background: linear-gradient(135deg, #008f5a 0%, #007347 100%);
+  box-shadow: 0 8px 25px rgba(0, 171, 108, 0.4);
+}
+
 /* Subjects Section */
 .subjects-section {
   background: rgba(255, 255, 255, 0.95);
@@ -424,6 +499,15 @@ textarea.form-control {
   
   .subjects-section .btn h5 {
     font-size: 1.5rem;
+  }
+  
+  .professional-links-section .btn {
+    min-height: 80px;
+    font-size: 0.85rem;
+  }
+  
+  .professional-links-section .btn h5 {
+    font-size: 1.2rem;
   }
 }
 

@@ -9,6 +9,41 @@
     </a>
   </div>
 
+  <!-- Professional Links Section -->
+  <div class="professional-links-section mb-5">
+    <h3 class="text-center mb-4">🔗 Connect With Me</h3>
+    <div class="row justify-content-center">
+      <div class="col-md-3 col-sm-6 mb-3">
+        <a href="https://www.linkedin.com/in/vivek-kumar-0001vk/" target="_blank" class="btn btn-linkedin btn-lg w-100 py-3">
+          <h5 class="mb-2">💼</h5>
+          <strong>LinkedIn</strong><br>
+          <small>Professional Profile</small>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-3">
+        <a href="https://www.instagram.com/_i_am_vivek._/" target="_blank" class="btn btn-instagram btn-lg w-100 py-3">
+          <h5 class="mb-2">📸</h5>
+          <strong>Instagram</strong><br>
+          <small>Personal Updates</small>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-3">
+        <a href="https://github.com/vivek-k1/" target="_blank" class="btn btn-github btn-lg w-100 py-3">
+          <h5 class="mb-2">🐙</h5>
+          <strong>GitHub</strong><br>
+          <small>Project Repository</small>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6 mb-3">
+        <a href="https://medium.com/@vivek05/" target="_blank" class="btn btn-medium btn-lg w-100 py-3">
+          <h5 class="mb-2">📝</h5>
+          <strong>Medium</strong><br>
+          <small>Writing & Articles</small>
+        </a>
+      </div>
+    </div>
+  </div>
+
   <!-- Subject Buttons -->
   <div class="subjects-section mb-5">
     <h3 class="text-center mb-4">📖 Choose Your Subject</h3>
@@ -24,7 +59,7 @@
         <a href="{{ url_for('main.index') }}?subject=mad2" class="btn btn-outline-success btn-lg w-100 py-3 {% if request.args.get('subject') == 'mad2' %}active{% endif %}">
           <h5 class="mb-2">📱</h5>
           <strong>MAD2</strong><br>
-          <small>Mobile App Development</small>
+          <small>Modern Development</small>
         </a>
       </div>
       <div class="col-md-4 col-lg-3 mb-3">
@@ -50,10 +85,10 @@
   {% elif current_subject == 'mad2' %}
     <div class="subject-header mb-4">
       <div class="d-flex align-items-center">
-        <h2 class="me-3 mb-0">📱 Mobile App Development (MAD2)</h2>
+        <h2 class="me-3 mb-0">📱 Modern Development (MAD2)</h2>
         <span class="badge bg-success">{{ questions|length }} Questions</span>
       </div>
-      <p class="text-muted mt-2">Learn mobile development, UI/UX design, and app deployment</p>
+      <p class="text-muted mt-2">Learn modern development, UI/UX design, and app deployment</p>
     </div>
   {% else %}
     <div class="subject-header mb-4">
