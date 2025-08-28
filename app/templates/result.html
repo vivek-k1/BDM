@@ -1,25 +1,43 @@
 {% extends 'base.html' %}
 {% block content %}
-  <h4>Q{{ q_id }}. {{ question.text }}</h4>
-  {% if question.topic %}<p class="text-muted">{{ question.topic }}</p>{% endif %}
-  <div class="mt-3">
-    {% if is_correct %}
-      <div class="alert alert-success">Correct! 🎉</div>
-    {% else %}
-      <div class="alert alert-danger">Incorrect. Correct answer is <strong>{{ question.answer }}</strong>.</div>
-    {% endif %}
-  </div>
-  <ul class="list-group">
-    {% for key, val in question.options.items() %}
-      <li class="list-group-item d-flex justify-content-between">
-        <span><strong>{{ key }}.</strong> {{ val }}</span>
-        {% if key == question.answer %}<span class="badge bg-success">Answer</span>{% endif %}
-        {% if selected == key and not is_correct %}<span class="badge bg-danger">Your choice</span>{% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-  <div class="mt-3 d-flex gap-2">
-    <a href="{{ url_for('main.question', q_id=q_id+1) }}" class="btn btn-primary">Next</a>
-    <a href="{{ url_for('main.index') }}" class="btn btn-outline-secondary">Back</a>
+  <div class="question-card">
+    <div class="card-header">
+      <h4 class="card-title mb-0">Q{{ q_id }}. {{ question.text }}</h4>
+      {% if question.topic %}<div class="question-topic">{{ question.topic }}</div>{% endif %}
+    </div>
+    <div class="card-body">
+      <div class="mt-3">
+        {% if is_correct %}
+          <div class="alert alert-success">
+            <h5 class="alert-heading">Correct! 🎉</h5>
+            <p class="mb-0">Great job! You got it right.</p>
+          </div>
+        {% else %}
+          <div class="alert alert-danger">
+            <h5 class="alert-heading">Incorrect</h5>
+            <p class="mb-0">The correct answer is <strong>{{ question.answer }}</strong>.</p>
+          </div>
+        {% endif %}
+      </div>
+      
+      <div class="list-group mt-4">
+        {% for key, val in question.options.items() %}
+          <div class="list-group-item d-flex justify-content-between align-items-center {% if key == question.answer %}correct{% endif %} {% if selected == key and not is_correct %}incorrect{% endif %}">
+            <span><strong>{{ key }}.</strong> {{ val }}</span>
+            <div>
+              {% if key == question.answer %}<span class="badge bg-success">✓ Answer</span>{% endif %}
+              {% if selected == key and not is_correct %}<span class="badge bg-danger">✗ Your choice</span>{% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      
+      <div class="d-flex gap-3 mt-4">
+        <a href="{{ url_for('main.question', q_id=q_id + 1) if q_id < total_questions else url_for('main.index') }}" class="btn btn-primary">
+          {% if q_id < total_questions %}Next Question{% else %}Back to Home{% endif %}
+        </a>
+        <a href="{{ url_for('main.index') }}" class="btn btn-outline-secondary">Back to Home</a>
+      </div>
+    </div>
   </div>
 {% endblock %}

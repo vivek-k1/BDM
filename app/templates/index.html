@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
   <!-- Best Notes Link - Large and Prominent -->
-  <div class="text-center mb-5 p-4 bg-primary text-white rounded-3">
+  <div class="best-notes-section">
     <h1 class="display-4 fw-bold mb-3">📚 Best Notes</h1>
     <p class="lead mb-4">Comprehensive study materials and insights</p>
     <a href="https://medium.com/@vivek05/" target="_blank" class="btn btn-light btn-lg px-5 py-3 fw-bold fs-3">
@@ -9,24 +9,39 @@
     </a>
   </div>
 
-  <div class="d-flex align-items-center mb-3">
+  <div class="d-flex align-items-center mb-4">
     <h2 class="me-3 mb-0">{{ title or 'Questions' }}</h2>
     <span class="badge bg-secondary">{{ questions|length }}</span>
   </div>
+  
   {% if questions %}
-    <div class="list-group">
+    <div class="row">
       {% for q in questions %}
-        <a href="{{ url_for('main.question', q_id=loop.index) }}" class="list-group-item list-group-item-action">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Q{{ loop.index }}. {{ q.text|truncate(100) }}</h5>
-            {% if q.topic %}<small class="text-muted">{{ q.topic }}</small>{% endif %}
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="question-card">
+            <div class="card-header">
+              <h5 class="card-title">Q{{ loop.index }}. {{ q.text[:50] }}{% if q.text|length > 50 %}...{% endif %}</h5>
+              {% if q.topic %}<div class="question-topic">{{ q.topic }}</div>{% endif %}
+            </div>
+            <div class="card-body">
+              <p class="card-text text-muted">Options: A, B, C, D</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">Set {{ loop.index // 12 + 1 }} Q{{ loop.index }} - {{ q.topic or 'General' }}</small>
+                <a href="{{ url_for('main.question', q_id=loop.index) }}" class="btn btn-primary btn-sm">Practice</a>
+              </div>
+            </div>
           </div>
-          <small class="text-muted">Options: A, B, C, D</small>
-        </a>
+        </div>
       {% endfor %}
     </div>
   {% else %}
-    <p class="text-muted">No questions found. Add one to get started.</p>
+    <div class="card">
+      <div class="card-body text-center">
+        <h5 class="card-title">No questions available</h5>
+        <p class="card-text">Add some questions to get started!</p>
+        <a href="{{ url_for('main.add_question') }}" class="btn btn-primary">Add Question</a>
+      </div>
+    </div>
   {% endif %}
 {% endblock %}
 
