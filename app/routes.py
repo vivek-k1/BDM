@@ -68,7 +68,7 @@ def question(q_id: int):
         selected = request.form.get('answer')
         correct_answer = q.get('answer')
         is_correct = (selected == correct_answer) if correct_answer else None
-        return render_template('result.html', question=q, q_id=q_id, selected=selected, is_correct=is_correct)
+        return render_template('result.html', question=q, q_id=q_id, selected=selected, is_correct=is_correct, total_questions=len(questions))
 
     return render_template('question.html', question=q, q_id=q_id)
 

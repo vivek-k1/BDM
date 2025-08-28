@@ -33,9 +33,11 @@
       </div>
       
       <div class="d-flex gap-3 mt-4">
-        <a href="{{ url_for('main.question', q_id=q_id + 1) if q_id < total_questions else url_for('main.index') }}" class="btn btn-primary">
-          {% if q_id < total_questions %}Next Question{% else %}Back to Home{% endif %}
-        </a>
+        {% if q_id < total_questions %}
+          <a href="{{ url_for('main.question', q_id=q_id + 1) }}" class="btn btn-primary">Next Question</a>
+        {% else %}
+          <a href="{{ url_for('main.index') }}" class="btn btn-primary">Back to Home</a>
+        {% endif %}
         <a href="{{ url_for('main.index') }}" class="btn btn-outline-secondary">Back to Home</a>
       </div>
     </div>
