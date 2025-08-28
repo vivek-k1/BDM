@@ -9,10 +9,61 @@
     </a>
   </div>
 
-  <div class="d-flex align-items-center mb-4">
-    <h2 class="me-3 mb-0">{{ title or 'Questions' }}</h2>
-    <span class="badge bg-secondary">{{ questions|length }}</span>
+  <!-- Subject Buttons -->
+  <div class="subjects-section mb-5">
+    <h3 class="text-center mb-4">📖 Choose Your Subject</h3>
+    <div class="row justify-content-center">
+      <div class="col-md-4 col-lg-3 mb-3">
+        <a href="{{ url_for('main.index') }}?subject=bdm" class="btn btn-outline-primary btn-lg w-100 py-3 {% if not request.args.get('subject') or request.args.get('subject') == 'bdm' %}active{% endif %}">
+          <h5 class="mb-2">📊</h5>
+          <strong>BDM</strong><br>
+          <small>Business Data Management</small>
+        </a>
+      </div>
+      <div class="col-md-4 col-lg-3 mb-3">
+        <a href="{{ url_for('main.index') }}?subject=mad2" class="btn btn-outline-success btn-lg w-100 py-3 {% if request.args.get('subject') == 'mad2' %}active{% endif %}">
+          <h5 class="mb-2">📱</h5>
+          <strong>MAD2</strong><br>
+          <small>Mobile App Development</small>
+        </a>
+      </div>
+      <div class="col-md-4 col-lg-3 mb-3">
+        <a href="{{ url_for('main.index') }}?subject=all" class="btn btn-outline-info btn-lg w-100 py-3 {% if request.args.get('subject') == 'all' %}active{% endif %}">
+          <h5 class="mb-2">📚</h5>
+          <strong>All Subjects</strong><br>
+          <small>Complete Question Bank</small>
+        </a>
+      </div>
+    </div>
   </div>
+
+  <!-- Current Subject Info -->
+  {% set current_subject = request.args.get('subject', 'bdm') %}
+  {% if current_subject == 'bdm' %}
+    <div class="subject-header mb-4">
+      <div class="d-flex align-items-center">
+        <h2 class="me-3 mb-0">📊 Business Data Management (BDM)</h2>
+        <span class="badge bg-primary">{{ questions|length }} Questions</span>
+      </div>
+      <p class="text-muted mt-2">Master the fundamentals of data analysis, economics, and business intelligence</p>
+    </div>
+  {% elif current_subject == 'mad2' %}
+    <div class="subject-header mb-4">
+      <div class="d-flex align-items-center">
+        <h2 class="me-3 mb-0">📱 Mobile App Development (MAD2)</h2>
+        <span class="badge bg-success">{{ questions|length }} Questions</span>
+      </div>
+      <p class="text-muted mt-2">Learn mobile development, UI/UX design, and app deployment</p>
+    </div>
+  {% else %}
+    <div class="subject-header mb-4">
+      <div class="d-flex align-items-center">
+        <h2 class="me-3 mb-0">📚 All Subjects</h2>
+        <span class="badge bg-info">{{ questions|length }} Questions</span>
+      </div>
+      <p class="text-muted mt-2">Complete question bank across all subjects</p>
+    </div>
+  {% endif %}
   
   {% if questions %}
     <div class="row">
@@ -37,7 +88,7 @@
   {% else %}
     <div class="card">
       <div class="card-body text-center">
-        <h5 class="card-title">No questions available</h5>
+        <h5 class="card-title">No questions available for this subject</h5>
         <p class="card-text">Add some questions to get started!</p>
         <a href="{{ url_for('main.add_question') }}" class="btn btn-primary">Add Question</a>
       </div>

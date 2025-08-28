@@ -43,10 +43,33 @@ def filter_by_set(questions: List[Dict[str, Any]], set_id: int) -> List[Dict[str
     return filtered
 
 
+def filter_by_subject(questions: List[Dict[str, Any]], subject: str) -> List[Dict[str, Any]]:
+    if subject == 'all':
+        return questions
+    
+    # Default to BDM if no subject specified
+    if not subject or subject == 'bdm':
+        # All current questions are BDM-related
+        return questions
+    
+    elif subject == 'mad2':
+        # Filter for MAD2 questions (you can add MAD2 questions later)
+        mad2_questions = []
+        for q in questions:
+            topic = (q.get('topic') or '').lower()
+            if 'mad2' in topic or 'mobile' in topic or 'app' in topic or 'development' in topic:
+                mad2_questions.append(q)
+        return mad2_questions
+    
+    return questions
+
+
 @bp.route('/')
 def index():
     questions = load_questions()
-    return render_template('index.html', questions=questions, title='All Questions')
+    subject = request.args.get('subject', 'bdm')
+    filtered_questions = filter_by_subject(questions, subject)
+    return render_template('index.html', questions=filtered_questions, title='All Questions')
 
 
 @bp.route('/set/<int:set_id>')
@@ -83,6 +106,7 @@ def add_question():
         option_d = request.form.get('option_d', '').strip()
         answer = request.form.get('answer', '').strip().upper()
         topic = request.form.get('topic', '').strip()
+        subject = request.form.get('subject', 'bdm').strip()
 
         if not text or not option_a or not option_b or not option_c or not option_d or answer not in {'A', 'B', 'C', 'D'}:
             flash('Please fill all fields and choose a valid answer (A/B/C/D).', 'danger')
@@ -99,6 +123,7 @@ def add_question():
             },
             'answer': answer,
             'topic': topic,
+            'subject': subject,
         }
         questions.append(new_question)
         save_questions(questions)
@@ -184,6 +209,7 @@ def import_questions():
             options = item.get('options')
             answer = (item.get('answer') or '').strip().upper() or None
             topic = str(item.get('topic', '') or item.get('set', '') or '').strip()
+            subject = str(item.get('subject', 'bdm') or 'bdm').strip()
             if not text or not isinstance(options, dict):
                 continue
             
@@ -197,7 +223,7 @@ def import_questions():
             if answer and answer not in fixed_options:
                 # ignore invalid answer
                 answer = None
-            normalized.append({'text': text, 'options': fixed_options, 'answer': answer, 'topic': topic})
+            normalized.append({'text': text, 'options': fixed_options, 'answer': answer, 'topic': topic, 'subject': subject})
 
         if not normalized:
             flash('No valid questions found to import.', 'warning')
