@@ -5,15 +5,25 @@
     <span class="badge bg-secondary">{{ total }}</span>
   </div>
 
-  <form method="post">
-    {% for q in questions %}
-      {% set q_index = loop.index %}
-      <div class="question-card mb-4">
-        <div class="card-header">
-          <h5 class="card-title">Q{{ q_index }}. {{ q.text }}</h5>
-          {% if q.topic %}<div class="question-topic">{{ q.topic }}</div>{% endif %}
-        </div>
-        <div class="card-body">
+  <!-- Progress Bar -->
+  <div class="progress mb-4" style="height: 10px;">
+    <div class="progress-bar bg-primary" role="progressbar" style="width: {{ (current_question / total * 100) if total > 0 else 0 }}%" aria-valuenow="{{ current_question }}" aria-valuemin="0" aria-valuemax="{{ total }}">
+      {{ current_question }} / {{ total }}
+    </div>
+  </div>
+
+  {% if questions %}
+    {% set q = questions[current_question - 1] %}
+    {% set q_index = current_question %}
+    
+    <div class="question-card">
+      <div class="card-header">
+        <h5 class="card-title">Q{{ q_index }}. {{ q.text }}</h5>
+        {% if q.topic %}<div class="question-topic">{{ q.topic }}</div>{% endif %}
+      </div>
+      <div class="card-body">
+        <form method="post">
+          <input type="hidden" name="question_number" value="{{ q_index }}">
           <div class="list-group">
             {% for key, val in q.options.items() %}
               {% set selected = results.get(q_index, {}).get('selected') if results else None %}
@@ -21,7 +31,7 @@
               {% set correct = results.get(q_index, {}).get('correct') if results else None %}
               
               <label class="list-group-item {% if results and results[q_index] and results[q_index].selected_answer == key %}selected{% endif %} {% if results and results[q_index] and results[q_index].selected_answer == key and results[q_index].is_correct %}correct{% endif %} {% if results and results[q_index] and results[q_index].selected_answer == key and not results[q_index].is_correct %}incorrect{% endif %}">
-                <input class="form-check-input me-3" type="radio" name="ans_{{ q_index }}" value="{{ key }}" {% if results and results[q_index] and results[q_index].selected_answer == key %}checked{% endif %} required>
+                <input class="form-check-input me-3" type="radio" name="answer" value="{{ key }}" {% if results and results[q_index] and results[q_index].selected_answer == key %}checked{% endif %} required>
                 <strong>{{ key }}.</strong> {{ val }}
                 {% if results and results[q_index] %}
                   {% if results[q_index].selected_answer == key and results[q_index].is_correct %}
@@ -49,18 +59,83 @@
               {% endif %}
             </div>
           {% endif %}
+          
+          <div class="d-flex justify-content-between align-items-center mt-4">
+            {% if q_index > 1 %}
+              <button type="submit" name="action" value="previous" class="btn btn-outline-secondary">
+                ← Previous Question
+              </button>
+            {% else %}
+              <div></div>
+            {% endif %}
+            
+            <div class="d-flex gap-2">
+              {% if not results or not results[q_index] %}
+                <button type="submit" name="action" value="submit" class="btn btn-primary">
+                  Submit Answer
+                </button>
+              {% endif %}
+              
+              {% if q_index < total %}
+                <button type="submit" name="action" value="next" class="btn btn-success">
+                  Next Question →
+                </button>
+              {% else %}
+                <button type="submit" name="action" value="finish" class="btn btn-success">
+                  Finish Practice
+                </button>
+              {% endif %}
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  {% else %}
+    <div class="card">
+      <div class="card-body text-center">
+        <h5 class="card-title">No questions available</h5>
+        <p class="card-text">Add some questions to get started!</p>
+        <a href="{{ url_for('main.add_question') }}" class="btn btn-primary">Add Question</a>
+      </div>
+    </div>
+  {% endif %}
+
+  <!-- Practice Summary -->
+  {% if results and total > 0 %}
+    <div class="practice-summary mt-4">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title mb-0">📊 Practice Summary</h5>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 mb-3">
+              <div class="text-center">
+                <h4 class="text-primary">{{ answered_questions }}</h4>
+                <small class="text-muted">Questions Answered</small>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+              <div class="text-center">
+                <h4 class="text-success">{{ correct_answers }}</h4>
+                <small class="text-muted">Correct Answers</small>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+              <div class="text-center">
+                <h4 class="text-danger">{{ incorrect_answers }}</h4>
+                <small class="text-muted">Incorrect Answers</small>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+              <div class="text-center">
+                <h4 class="text-info">{{ "%.1f"|format(correct_percentage) }}%</h4>
+                <small class="text-muted">Success Rate</small>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    {% endfor %}
-    
-    <div class="text-center mt-4">
-      <button type="submit" class="btn btn-primary btn-lg px-5">
-        {% if results %}
-          <span class="loading me-2"></span>Re-submit Answers
-        {% else %}
-          Submit All Answers
-        {% endif %}
-      </button>
     </div>
-  </form>
+  {% endif %}
 {% endblock %}

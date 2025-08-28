@@ -25,25 +25,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('main.list_set', set_id=1) }}">Set 1</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('main.list_set', set_id=2) }}">Set 2</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="{{ url_for('main.practice_all') }}">Practice All</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('main.practice_set', set_id=1) }}">Practice Set 1</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('main.practice_set', set_id=2) }}">Practice Set 2</a>
+              <a class="nav-link" href="{{ url_for('main.add_question') }}">Add Question</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{ url_for('main.import_questions') }}">Import</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('main.add_question') }}">Add Question</a>
             </li>
           </ul>
         </div>

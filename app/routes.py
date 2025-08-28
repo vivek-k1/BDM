@@ -137,22 +137,53 @@ def add_question():
 def practice_all():
     questions = load_questions()
     results: Dict[int, Dict[str, Any]] = {}
-    score = 0
-    if request.method == 'POST':
-        for idx, q in enumerate(questions, start=1):
-            selected = request.form.get(f'ans_{idx}')
-            correct_answer = q.get('answer')
-            is_correct = (selected == correct_answer) if (selected and correct_answer) else None
-            if is_correct is True:
-                score += 1
-            results[idx] = {
-                'selected': selected,
-                'is_correct': is_correct,
-                'correct': correct_answer,
-            }
-        return render_template('practice.html', questions=questions, results=results, score=score, total=len(questions), title='Practice All')
-
-    return render_template('practice.html', questions=questions, results=results, score=None, total=len(questions), title='Practice All')
+    current_question = 1
+    
+    # Get current question from session or request
+    if request.method == 'GET':
+        current_question = int(request.args.get('q', 1))
+    elif request.method == 'POST':
+        current_question = int(request.form.get('question_number', 1))
+        action = request.form.get('action', 'submit')
+        
+        if action == 'submit':
+            # Handle answer submission
+            selected = request.form.get('answer')
+            if selected and 1 <= current_question <= len(questions):
+                q = questions[current_question - 1]
+                correct_answer = q.get('answer')
+                is_correct = (selected == correct_answer) if correct_answer else None
+                
+                results[current_question] = {
+                    'selected_answer': selected,
+                    'is_correct': is_correct,
+                    'correct': correct_answer,
+                }
+        
+        elif action == 'next':
+            current_question = min(current_question + 1, len(questions))
+        elif action == 'previous':
+            current_question = max(current_question - 1, 1)
+        elif action == 'finish':
+            flash('Practice session completed!', 'success')
+            return redirect(url_for('main.index'))
+    
+    # Calculate statistics
+    answered_questions = len([r for r in results.values() if r.get('selected_answer')])
+    correct_answers = len([r for r in results.values() if r.get('is_correct')])
+    incorrect_answers = answered_questions - correct_answers
+    correct_percentage = (correct_answers / answered_questions * 100) if answered_questions > 0 else 0
+    
+    return render_template('practice.html', 
+                         questions=questions, 
+                         results=results, 
+                         current_question=current_question,
+                         total=len(questions), 
+                         title='Practice All',
+                         answered_questions=answered_questions,
+                         correct_answers=correct_answers,
+                         incorrect_answers=incorrect_answers,
+                         correct_percentage=correct_percentage)
 
 
 @bp.route('/practice/<int:set_id>', methods=['GET', 'POST'])
