@@ -37,56 +37,6 @@
     </div>
   </div>
 
-  <!-- Current Subject Info -->
-  {% set current_subject = request.args.get('subject', 'bdm') %}
-  {% if current_subject == 'bdm' %}
-    <div class="subject-header mb-4">
-      <div class="d-flex align-items-center">
-        <h2 class="me-3 mb-0">📊 Business Data Management (BDM)</h2>
-        <span class="badge bg-primary">{{ questions|length }} Questions</span>
-      </div>
-      <p class="text-muted mt-2">Master the fundamentals of data analysis, economics, and business intelligence</p>
-    </div>
-  {% elif current_subject == 'mad2' %}
-    <div class="subject-header mb-4">
-      <div class="d-flex align-items-center">
-        <h2 class="me-3 mb-0">📱 Modern Development (MAD2)</h2>
-        <span class="badge bg-success">{{ questions|length }} Questions</span>
-      </div>
-      <p class="text-muted mt-2">Learn modern development, UI/UX design, and app deployment</p>
-    </div>
-  {% else %}
-    <div class="subject-header mb-4">
-      <div class="d-flex align-items-center">
-        <h2 class="me-3 mb-0">📚 All Subjects</h2>
-        <span class="badge bg-info">{{ questions|length }} Questions</span>
-      </div>
-      <p class="text-muted mt-2">Complete question bank across all subjects</p>
-    </div>
-  {% endif %}
-  
-  {% if questions %}
-    <div class="row">
-      {% for q in questions %}
-        <div class="col-md-6 col-lg-4 mb-4">
-          <div class="question-card">
-            <div class="card-header">
-              <h5 class="card-title">Q{{ loop.index }}. {{ q.text[:50] }}{% if q.text|length > 50 %}...{% endif %}</h5>
-              {% if q.topic %}<div class="question-topic">{{ q.topic }}</div>{% endif %}
-            </div>
-            <div class="card-body">
-              <p class="card-text text-muted">Options: A, B, C, D</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <small class="text-muted">Set {{ loop.index // 12 + 1 }} Q{{ loop.index }} - {{ q.topic or 'General' }}</small>
-                <a href="{{ url_for('main.question', q_id=loop.index) }}" class="btn btn-primary btn-sm">Practice</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-  {% endif %}
-
   <!-- Professional Links Section - Footer -->
   <div class="professional-footer-section mt-5">
     <h3 class="text-center mb-4">🔗 Connect With Me</h3>
