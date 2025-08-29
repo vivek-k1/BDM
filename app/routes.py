@@ -11,26 +11,57 @@ bp = Blueprint('main', __name__)
 
 
 DATA_FILE = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'questions.json')
+MAD2_FILE = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'mad2_questions.json')
 
 
-def load_questions() -> List[Dict[str, Any]]:
-    if not os.path.exists(DATA_FILE):
+def _read_json_array(file_path: str) -> List[Dict[str, Any]]:
+    if not os.path.exists(file_path):
         return []
-    with open(DATA_FILE, 'r', encoding='utf-8') as f:
-        try:
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
-        except json.JSONDecodeError:
-            return []
-    if isinstance(data, dict) and 'questions' in data:
+    except Exception:
+        return []
+    if isinstance(data, dict) and 'questions' in data and isinstance(data['questions'], list):
         return data['questions']
     if isinstance(data, list):
         return data
     return []
 
 
+def load_questions() -> List[Dict[str, Any]]:
+    # Merge BDM (default) and MAD2 question banks
+    base = _read_json_array(DATA_FILE)
+    mad2 = _read_json_array(MAD2_FILE)
+
+    # Ensure each question has a subject label; default to 'bdm' for legacy entries
+    normalized: List[Dict[str, Any]] = []
+    for q in base + mad2:
+        if not isinstance(q, dict):
+            continue
+        q = dict(q)
+        if not q.get('subject'):
+            q['subject'] = 'bdm'
+        normalized.append(q)
+    return normalized
+
+
 def save_questions(questions: List[Dict[str, Any]]) -> None:
+    # Split questions by subject and persist to respective files
+    bdm_questions: List[Dict[str, Any]] = []
+    mad2_questions: List[Dict[str, Any]] = []
+
+    for q in questions:
+        subject = (q.get('subject') or 'bdm').lower()
+        if subject == 'mad2':
+            mad2_questions.append(q)
+        else:
+            bdm_questions.append(q)
+
     with open(DATA_FILE, 'w', encoding='utf-8') as f:
-        json.dump({'questions': questions}, f, ensure_ascii=False, indent=2)
+        json.dump({'questions': bdm_questions}, f, ensure_ascii=False, indent=2)
+    with open(MAD2_FILE, 'w', encoding='utf-8') as f:
+        json.dump({'questions': mad2_questions}, f, ensure_ascii=False, indent=2)
 
 
 def filter_by_set(questions: List[Dict[str, Any]], set_id: int) -> List[Dict[str, Any]]:
