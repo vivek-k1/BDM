@@ -1,34 +1,35 @@
 {% extends 'base.html' %}
+
 {% block content %}
-  <!-- Best Notes Link - Large and Prominent -->
   <div class="best-notes-section">
-    <h1 class="display-4 fw-bold mb-3">📚 Best Notes</h1>
-    <p class="lead mb-4">Comprehensive study materials and insights</p>
-    <a href="https://medium.com/@vivek05/" target="_blank" class="btn btn-light btn-lg px-5 py-3 fw-bold fs-3">
-      🌟 Read Best Notes Here 🌟
-    </a>
+    <div class="position-relative">
+      <h1>📚 Best Notes</h1>
+      <p class="lead">Comprehensive study materials and insights</p>
+      <a href="https://medium.com/@vivek05/" target="_blank" class="btn btn-light btn-lg">
+        ✨ Read Best Notes Here ✨
+      </a>
+    </div>
   </div>
 
-  <!-- Subject Buttons -->
-  <div class="subjects-section mb-5">
-    <h3 class="text-center mb-4">📖 Choose Your Subject</h3>
-    <div class="row justify-content-center">
-      <div class="col-md-4 col-lg-3 mb-3">
-        <a href="{{ url_for('main.index') }}?subject=bdm" class="btn btn-outline-primary btn-lg w-100 py-3 {% if not request.args.get('subject') or request.args.get('subject') == 'bdm' %}active{% endif %}">
+  <div class="subjects-section">
+    <h3>📖 Choose Your Subject</h3>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="{{ url_for('main.index', subject='bdm') }}" class="btn btn-outline-primary w-100 {% if request.args.get('subject', 'bdm') == 'bdm' %}active{% endif %}">
           <h5 class="mb-2">📊</h5>
           <strong>BDM</strong><br>
           <small>Business Data Management</small>
         </a>
       </div>
-      <div class="col-md-4 col-lg-3 mb-3">
-        <a href="{{ url_for('main.index') }}?subject=mad2" class="btn btn-outline-success btn-lg w-100 py-3 {% if request.args.get('subject') == 'mad2' %}active{% endif %}">
+      <div class="col-md-4">
+        <a href="{{ url_for('main.index', subject='mad2') }}" class="btn btn-outline-success w-100 {% if request.args.get('subject') == 'mad2' %}active{% endif %}">
           <h5 class="mb-2">📱</h5>
           <strong>MAD2</strong><br>
           <small>Modern Development</small>
         </a>
       </div>
-      <div class="col-md-4 col-lg-3 mb-3">
-        <a href="{{ url_for('main.index') }}?subject=all" class="btn btn-outline-info btn-lg w-100 py-3 {% if request.args.get('subject') == 'all' %}active{% endif %}">
+      <div class="col-md-4">
+        <a href="{{ url_for('main.index', subject='all') }}" class="btn btn-outline-info w-100 {% if request.args.get('subject') == 'all' %}active{% endif %}">
           <h5 class="mb-2">📚</h5>
           <strong>All Subjects</strong><br>
           <small>Complete Question Bank</small>
@@ -37,64 +38,118 @@
     </div>
   </div>
 
-  <!-- Professional Links Section - Footer -->
-  <div class="professional-footer-section mt-5">
-    <h3 class="text-center mb-4">🔗 Connect With Me</h3>
-    <div class="row justify-content-center">
-      <div class="col-md-3 col-sm-6 mb-3">
-        <a href="https://www.linkedin.com/in/vivek-kumar-0001vk/" target="_blank" class="btn btn-linkedin btn-lg w-100 py-3">
-          <h5 class="mb-2">💼</h5>
-          <strong>LinkedIn</strong><br>
-          <small>Professional Profile</small>
+  {% if request.args.get('subject', 'bdm') == 'bdm' %}
+    <!-- BDM Questions Section -->
+    <div class="bdm-questions-section mt-4">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title mb-0">📊 BDM Practice Questions</h4>
+        </div>
+        <div class="card-body">
+          <div class="row g-4">
+            {% if questions %}
+              {% for q in questions %}
+                <div class="col-md-6 col-lg-4">
+                  <div class="question-card h-100">
+                    <div class="card-header">
+                      <h6 class="card-title">Q{{ loop.index }}. {{ q.text[:100] }}{% if q.text|length > 100 %}...{% endif %}</h6>
+                      {% if q.topic %}<div class="question-topic">{{ q.topic }}</div>{% endif %}
+                    </div>
+                    <div class="card-body">
+                      <div class="options-preview">
+                        {% for key, val in q.options.items() %}
+                          <div class="option-item">
+                            <strong>{{ key }}.</strong> {{ val[:50] }}{% if val|length > 50 %}...{% endif %}
+                          </div>
+                        {% endfor %}
+                      </div>
+                      <div class="mt-3">
+                        <a href="{{ url_for('main.question', q_id=loop.index) }}" class="btn btn-primary btn-sm">
+                          Practice This Question
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            {% else %}
+              <div class="col-12">
+                <div class="text-center">
+                  <p class="text-muted">No BDM questions available yet.</p>
+                  <a href="{{ url_for('main.add_question') }}" class="btn btn-primary">Add First Question</a>
+                </div>
+              </div>
+            {% endif %}
+          </div>
+          
+          {% if questions %}
+            <div class="text-center mt-4">
+              <a href="{{ url_for('main.practice_all', subject='bdm') }}" class="btn btn-primary btn-lg">
+                🎯 Practice All BDM Questions
+              </a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="quick-actions-section mt-4">
+    <h3>⚡ Quick Actions</h3>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="{{ url_for('main.practice_all') }}" class="btn btn-primary w-100">
+          <h5 class="mb-2">🎯</h5>
+          <strong>Practice All</strong><br>
+          <small>Answer all questions</small>
         </a>
       </div>
-      <div class="col-md-3 col-sm-6 mb-3">
-        <a href="https://www.instagram.com/_i_am_vivek._/" target="_blank" class="btn btn-instagram btn-lg w-100 py-3">
-          <h5 class="mb-2">📸</h5>
-          <strong>Instagram</strong><br>
-          <small>Personal Updates</small>
+      <div class="col-md-4">
+        <a href="{{ url_for('main.add_question') }}" class="btn btn-success w-100">
+          <h5 class="mb-2">➕</h5>
+          <strong>Add Question</strong><br>
+          <small>Create new question</small>
         </a>
       </div>
-      <div class="col-md-3 col-sm-6 mb-3">
-        <a href="https://github.com/vivek-k1/" target="_blank" class="btn btn-github btn-lg w-100 py-3">
-          <h5 class="mb-2">🐙</h5>
-          <strong>GitHub</strong><br>
-          <small>Project Repository</small>
-        </a>
-      </div>
-      <div class="col-md-3 col-sm-6 mb-3">
-        <a href="https://medium.com/@vivek05/" target="_blank" class="btn btn-medium btn-lg w-100 py-3">
-          <h5 class="mb-2">📝</h5>
-          <strong>Medium</strong><br>
-          <small>Writing & Articles</small>
+      <div class="col-md-4">
+        <a href="{{ url_for('main.import_questions') }}" class="btn btn-info w-100">
+          <h5 class="mb-2">📥</h5>
+          <strong>Bulk Import</strong><br>
+          <small>Import many questions</small>
         </a>
       </div>
     </div>
   </div>
 
-  <!-- Quick Actions Section -->
-  <div class="quick-actions-section mt-5">
-    <h3 class="text-center mb-4">🚀 Quick Actions</h3>
-    <div class="row justify-content-center">
-      <div class="col-md-4 col-sm-6 mb-3">
-        <a href="{{ url_for('main.practice_all') }}" class="btn btn-primary btn-lg w-100 py-3">
-          <h5 class="mb-2">📝</h5>
-          <strong>Practice All</strong><br>
-          <small>Complete Question Set</small>
+  <div class="professional-footer-section">
+    <h3>🔗 Professional Links</h3>
+    <div class="row g-4">
+      <div class="col-md-3 col-sm-6">
+        <a href="https://www.linkedin.com/in/vivek-kumar-0001vk/" target="_blank" class="btn btn-linkedin w-100">
+          <h5 class="mb-2">💼</h5>
+          <strong>LinkedIn</strong><br>
+          <small>Professional Profile</small>
         </a>
       </div>
-      <div class="col-md-4 col-sm-6 mb-3">
-        <a href="{{ url_for('main.add_question') }}" class="btn btn-success btn-lg w-100 py-3">
-          <h5 class="mb-2">➕</h5>
-          <strong>Add Question</strong><br>
-          <small>Contribute Questions</small>
+      <div class="col-md-3 col-sm-6">
+        <a href="https://www.instagram.com/_i_am_vivek._/" target="_blank" class="btn btn-instagram w-100">
+          <h5 class="mb-2">📸</h5>
+          <strong>Instagram</strong><br>
+          <small>Personal Updates</small>
         </a>
       </div>
-      <div class="col-md-4 col-sm-6 mb-3">
-        <a href="{{ url_for('main.import_questions') }}" class="btn btn-info btn-lg w-100 py-3">
-          <h5 class="mb-2">📥</h5>
-          <strong>Bulk Import</strong><br>
-          <small>Import Questions</small>
+      <div class="col-md-3 col-sm-6">
+        <a href="https://github.com/vivek-k1/BDM" target="_blank" class="btn btn-github w-100">
+          <h5 class="mb-2">🐙</h5>
+          <strong>GitHub</strong><br>
+          <small>Code Repository</small>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <a href="https://medium.com/@vivek05/" target="_blank" class="btn btn-medium w-100">
+          <h5 class="mb-2">✍️</h5>
+          <strong>Medium</strong><br>
+          <small>Blog & Articles</small>
         </a>
       </div>
     </div>

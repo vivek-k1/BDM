@@ -1,3 +1,166 @@
+/* Options Preview */
+.options-preview {
+  margin-bottom: 1rem;
+}
+
+.option-item {
+  padding: 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+  background: #f9fafb;
+}
+
+.option-item:hover {
+  background: #f3f4f6;
+}
+
+/* BDM Questions Section */
+.bdm-questions-section .question-card {
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.bdm-questions-section .question-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-color);
+}
+
+.bdm-questions-section .card-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.bdm-questions-section .card-title {
+  color: white;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.bdm-questions-section .question-topic {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+}
+
+/* Timer Container */
+.timer-container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: var(--border-radius);
+  padding: 1rem 1.5rem;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--warning-color);
+}
+
+.timer-display {
+  text-align: center;
+}
+
+.timer-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.timer {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--warning-color);
+  font-family: 'Courier New', monospace;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timer.warning {
+  color: var(--danger-color);
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* Result Summary */
+.result-summary .card {
+  background: rgba(255, 255, 255, 0.98);
+  border-left: 4px solid var(--primary-color);
+}
+
+.performance-bar .progress-bar {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: white;
+}
+
+/* Set List */
+.question-list .question-card {
+  margin-bottom: 1.5rem;
+}
+
+.question-list .question-card .card-header {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.question-list .list-group-item {
+  border: 1px solid #e5e7eb;
+  cursor: default;
+  transition: none;
+}
+
+.question-list .list-group-item:hover {
+  transform: none;
+  background: white;
+}
+
+/* Modal Timer Container */
+.timer-container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: var(--border-radius);
+  padding: 1rem 1.5rem;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--warning-color);
+}
+
+.timer-display {
+  text-align: center;
+}
+
+.timer-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.timer {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--warning-color);
+  font-family: 'Courier New', monospace;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timer.warning {
+  color: var(--danger-color);
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
 /* Modern MCQ Practice App Styling */
 :root {
   --primary-color: #667eea;
@@ -604,6 +767,10 @@ textarea.form-control {
   .quick-actions-section .btn {
     min-height: 100px;
     font-size: 0.9rem;
+  }
+  
+  .timer {
+    font-size: 1.5rem;
   }
 }
 

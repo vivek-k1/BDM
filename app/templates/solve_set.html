@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="d-flex align-items-center justify-content-between mb-4">
+    <div>
+      <h2 class="me-3 mb-0">{{ title }}</h2>
+      <span class="badge bg-secondary">{{ questions|length }} Questions</span>
+    </div>
+    
+    <!-- Timer -->
+    <div class="timer-container">
+      <div class="timer-display">
+        <span class="timer-label">Time Remaining:</span>
+        <div class="timer" id="timer">
+          <span id="minutes">45</span>:<span id="seconds">00</span>
+        </div>
+      </div>
+      <div class="progress mt-2" style="height: 8px;">
+        <div class="progress-bar bg-warning" id="timer-progress" role="progressbar" style="width: 100%"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Instructions -->
+  <div class="alert alert-info">
+    <h5 class="alert-heading">📋 Instructions</h5>
+    <ul class="mb-0">
+      <li>You have <strong>{{ time_limit }} minutes</strong> to complete this set</li>
+      <li>Answer all questions before the timer expires</li>
+      <li>You can review and change your answers before submitting</li>
+      <li>Submit all answers at once using the "Submit All Answers" button</li>
+    </ul>
+  </div>
+
+  {% if questions %}
+    <form method="post" id="set-form">
+      {% for q in questions %}
+        {% set q_index = loop.index %}
+        
+        <div class="question-card">
+          <div class="card-header">
+            <h5 class="card-title">Q{{ q_index }}. {{ q.text }}</h5>
+            {% if q.topic %}<div class="question-topic">{{ q.topic }}</div>{% endif %}
+          </div>
+          <div class="card-body">
+            <div class="list-group">
+              {% for key, val in q.options.items() %}
+                <label class="list-group-item">
+                  <input class="form-check-input me-3" type="radio" name="ans_{{ q_index }}" value="{{ key }}" required>
+                  <strong>{{ key }}.</strong> {{ val }}
+                </label>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      
+      <div class="text-center mt-4 mb-5">
+        <button type="submit" class="btn btn-primary btn-lg px-5" id="submit-btn">
+          <span class="loading me-2"></span>Submit All Answers
+        </button>
+      </div>
+    </form>
+  {% else %}
+    <div class="card">
+      <div class="card-body text-center">
+        <h5 class="card-title">No questions available</h5>
+        <p class="card-text">Add some questions to get started!</p>
+        <a href="{{ url_for('main.add_question') }}" class="btn btn-primary">Add Question</a>
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+let timeLeft = {{ time_limit * 60 }};
+const totalTime = {{ time_limit * 60 }};
+let timerInterval;
+
+function updateTimer() {
+    const minutes = Math.floor(timeLeft / 60);
+    const seconds = timeLeft % 60;
+    
+    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+    
+    const progressPercentage = (timeLeft / totalTime) * 100;
+    document.getElementById('timer-progress').style.width = progressPercentage + '%';
+    
+    if (progressPercentage <= 20) {
+        document.getElementById('timer-progress').className = 'progress-bar bg-danger';
+    } else if (progressPercentage <= 40) {
+        document.getElementById('timer-progress').className = 'progress-bar bg-warning';
+    }
+    
+    if (timeLeft <= 0) {
+        clearInterval(timerInterval);
+        alert('Time is up! Submitting your answers automatically.');
+        document.getElementById('set-form').submit();
+    }
+    
+    timeLeft--;
+}
+
+function startTimer() {
+    updateTimer();
+    timerInterval = setInterval(updateTimer, 1000);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    startTimer();
+    
+    document.getElementById('set-form').addEventListener('submit', function(e) {
+        const unanswered = [];
+        {% for q in questions %}
+            {% set q_index = loop.index %}
+            if (!document.querySelector('input[name="ans_{{ q_index }}"]:checked')) {
+                unanswered.push({{ q_index }});
+            }
+        {% endfor %}
+        
+        if (unanswered.length > 0) {
+            if (!confirm(`You have ${unanswered.length} unanswered question(s): ${unanswered.join(', ')}. Do you want to submit anyway?`)) {
+                e.preventDefault();
+                return;
+            }
+        }
+        
+        document.getElementById('submit-btn').disabled = true;
+        document.getElementById('submit-btn').innerHTML = '<span class="loading me-2"></span>Submitting...';
+    });
+});
+</script>
+{% endblock %}

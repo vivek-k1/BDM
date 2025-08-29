@@ -73,10 +73,87 @@ def index():
 
 
 @bp.route('/set/<int:set_id>')
-def list_set(set_id: int):
+def list_set(set_id):
     questions = load_questions()
-    qset = filter_by_set(questions, set_id)
-    return render_template('index.html', questions=qset, title=f'Set {set_id} Questions')
+    if set_id == 1:
+        set_questions = questions[:23]
+        title = "Set 1: Predicted Question Paper"
+    elif set_id == 2:
+        set_questions = questions[23:46]
+        title = "Set 2: Predicted Question Paper"
+    else:
+        flash('Invalid set number', 'danger')
+        return redirect(url_for('main.index'))
+    
+    return render_template('set_list.html', questions=set_questions, set_id=set_id, title=title)
+
+
+@bp.route('/solve-set/<int:set_id>', methods=['GET', 'POST'])
+def solve_set(set_id):
+    questions = load_questions()
+    
+    if set_id == 1:
+        set_questions = questions[:23]
+        title = "Set 1: Predicted Question Paper"
+        time_limit = 45  # minutes
+    elif set_id == 2:
+        set_questions = questions[23:46]
+        title = "Set 2: Predicted Question Paper"
+        time_limit = 45  # minutes
+    else:
+        flash('Invalid set number', 'danger')
+        return redirect(url_for('main.index'))
+    
+    if request.method == 'POST':
+        score = 0
+        results = {}
+        
+        for idx, q in enumerate(set_questions, start=1):
+            selected = request.form.get(f'ans_{idx}')
+            correct_answer = q.get('answer')
+            is_correct = (selected == correct_answer) if (selected and correct_answer) else False
+            
+            if is_correct:
+                score += 1
+            
+            results[idx] = {
+                'selected': selected,
+                'is_correct': is_correct,
+                'correct': correct_answer,
+            }
+        
+        return render_template('set_result.html', 
+                             questions=set_questions, 
+                             results=results, 
+                             score=score, 
+                             total=len(set_questions), 
+                             set_id=set_id,
+                             title=title)
+    
+    return render_template('solve_set.html', 
+                         questions=set_questions, 
+                         set_id=set_id,
+                         title=title,
+                         time_limit=time_limit)
+
+
+@bp.route('/practice-set/<int:set_id>')
+def practice_set(set_id):
+    questions = load_questions()
+    if set_id == 1:
+        set_questions = questions[:23]
+        title = "Practice Set 1"
+    elif set_id == 2:
+        set_questions = questions[23:46]
+        title = "Practice Set 2"
+    else:
+        flash('Invalid set number', 'danger')
+        return redirect(url_for('main.index'))
+    
+    return render_template('practice.html', 
+                         questions=set_questions,
+                         title=title,
+                         total=len(set_questions))
 
 
 @bp.route('/question/<int:q_id>', methods=['GET', 'POST'])
@@ -136,6 +213,18 @@ def add_question():
 @bp.route('/practice', methods=['GET', 'POST'])
 def practice_all():
     questions = load_questions()
+    subject = request.args.get('subject', 'bdm')
+    
+    # Filter questions by subject
+    if subject == 'bdm':
+        questions = [q for q in questions if (q.get('subject') or 'bdm') == 'bdm']
+    elif subject == 'mad2':
+        questions = [q for q in questions if q.get('subject') == 'mad2']
+    elif subject == 'all':
+        pass  # Show all questions
+    else:
+        questions = [q for q in questions if (q.get('subject') or 'bdm') == 'bdm']
+    
     results: Dict[int, Dict[str, Any]] = {}
     current_question = 1
     
@@ -174,39 +263,96 @@ def practice_all():
     incorrect_answers = answered_questions - correct_answers
     correct_percentage = (correct_answers / answered_questions * 100) if answered_questions > 0 else 0
     
+    title = 'Practice All'
+    if subject == 'bdm':
+        title = 'Practice BDM Questions'
+    elif subject == 'mad2':
+        title = 'Practice MAD2 Questions'
+    elif subject == 'all':
+        title = 'Practice All Questions'
+    
     return render_template('practice.html', 
                          questions=questions, 
                          results=results, 
                          current_question=current_question,
                          total=len(questions), 
-                         title='Practice All',
+                         title=title,
                          answered_questions=answered_questions,
                          correct_answers=correct_answers,
                          incorrect_answers=incorrect_answers,
                          correct_percentage=correct_percentage)
 
 
-@bp.route('/practice/<int:set_id>', methods=['GET', 'POST'])
-def practice_set(set_id: int):
-    all_questions = load_questions()
-    questions = filter_by_set(all_questions, set_id)
+@bp.route('/practice/<subject>', methods=['GET', 'POST'])
+def practice_subject(subject):
+    questions = load_questions()
+    
+    # Filter questions by subject
+    if subject == 'bdm':
+        questions = [q for q in questions if (q.get('subject') or 'bdm') == 'bdm']
+    elif subject == 'mad2':
+        questions = [q for q in questions if q.get('subject') == 'mad2']
+    elif subject == 'all':
+        pass  # Show all questions
+    else:
+        questions = [q for q in questions if (q.get('subject') or 'bdm') == 'bdm']
+    
     results: Dict[int, Dict[str, Any]] = {}
-    score = 0
-    if request.method == 'POST':
-        for idx, q in enumerate(questions, start=1):
-            selected = request.form.get(f'ans_{idx}')
-            correct_answer = q.get('answer')
-            is_correct = (selected == correct_answer) if (selected and correct_answer) else None
-            if is_correct is True:
-                score += 1
-            results[idx] = {
-                'selected': selected,
-                'is_correct': is_correct,
-                'correct': correct_answer,
-            }
-        return render_template('practice.html', questions=questions, results=results, score=score, total=len(questions), title=f'Practice Set {set_id}')
-
-    return render_template('practice.html', questions=questions, results=results, score=None, total=len(questions), title=f'Practice Set {set_id}')
+    current_question = 1
+    
+    # Get current question from session or request
+    if request.method == 'GET':
+        current_question = int(request.args.get('q', 1))
+    elif request.method == 'POST':
+        current_question = int(request.form.get('question_number', 1))
+        action = request.form.get('action', 'submit')
+        
+        if action == 'submit':
+            # Handle answer submission
+            selected = request.form.get('answer')
+            if selected and 1 <= current_question <= len(questions):
+                q = questions[current_question - 1]
+                correct_answer = q.get('answer')
+                is_correct = (selected == correct_answer) if correct_answer else None
+                
+                results[current_question] = {
+                    'selected_answer': selected,
+                    'is_correct': is_correct,
+                    'correct': correct_answer,
+                }
+        
+        elif action == 'next':
+            current_question = min(current_question + 1, len(questions))
+        elif action == 'previous':
+            current_question = max(current_question - 1, 1)
+        elif action == 'finish':
+            flash('Practice session completed!', 'success')
+            return redirect(url_for('main.index'))
+    
+    # Calculate statistics
+    answered_questions = len([r for r in results.values() if r.get('selected_answer')])
+    correct_answers = len([r for r in results.values() if r.get('is_correct')])
+    incorrect_answers = answered_questions - correct_answers
+    correct_percentage = (correct_answers / answered_questions * 100) if answered_questions > 0 else 0
+    
+    title = 'Practice All'
+    if subject == 'bdm':
+        title = 'Practice BDM Questions'
+    elif subject == 'mad2':
+        title = 'Practice MAD2 Questions'
+    elif subject == 'all':
+        title = 'Practice All Questions'
+    
+    return render_template('practice.html', 
+                         questions=questions, 
+                         results=results, 
+                         current_question=current_question,
+                         total=len(questions), 
+                         title=title,
+                         answered_questions=answered_questions,
+                         correct_answers=correct_answers,
+                         incorrect_answers=incorrect_answers,
+                         correct_percentage=correct_percentage)
 
 
 @bp.route('/import', methods=['GET', 'POST'])

@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="d-flex align-items-center justify-content-between mb-4">
+    <div>
+      <h2 class="me-3 mb-0">{{ title }}</h2>
+      <span class="badge bg-secondary">{{ questions|length }} Questions</span>
+    </div>
+    
+    <div class="btn-group" role="group">
+      <a href="{{ url_for('main.solve_set', set_id=set_id) }}" class="btn btn-primary">
+        🕒 Solve with Timer
+      </a>
+      <a href="{{ url_for('main.practice_set', set_id=set_id) }}" class="btn btn-outline-primary">
+        🎯 Practice Mode
+      </a>
+    </div>
+  </div>
+
+  <!-- Set Info -->
+  <div class="alert alert-info">
+    <h5 class="alert-heading">📋 Set Information</h5>
+    <ul class="mb-0">
+      <li><strong>Mode 1 - Solve with Timer:</strong> Answer all questions with a 45-minute time limit</li>
+      <li><strong>Mode 2 - Practice Mode:</strong> Answer questions one by one with immediate feedback</li>
+      <li>Both modes cover the same {{ questions|length }} questions from {{ title }}</li>
+    </ul>
+  </div>
+
+  <!-- Question List -->
+  <div class="question-list">
+    {% for q in questions %}
+      <div class="question-card">
+        <div class="card-header">
+          <h5 class="card-title">Q{{ loop.index }}. {{ q.text }}</h5>
+          {% if q.topic %}<div class="question-topic">{{ q.topic }}</div>{% endif %}
+        </div>
+        <div class="card-body">
+          <div class="list-group">
+            {% for key, val in q.options.items() %}
+              <div class="list-group-item">
+                <strong>{{ key }}.</strong> {{ val }}
+              </div>
+            {% endfor %}
+          </div>
+          <div class="mt-3">
+            <span class="badge bg-primary">Answer: {{ q.answer }}</span>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- Action Buttons -->
+  <div class="text-center mt-4">
+    <div class="btn-group" role="group">
+      <a href="{{ url_for('main.solve_set', set_id=set_id) }}" class="btn btn-primary btn-lg">
+        🕒 Start Timed Test
+      </a>
+      <a href="{{ url_for('main.practice_set', set_id=set_id) }}" class="btn btn-outline-primary btn-lg">
+        🎯 Start Practice
+      </a>
+      <a href="{{ url_for('main.index') }}" class="btn btn-outline-secondary">
+        🏠 Back to Home
+      </a>
+    </div>
+  </div>
+{% endblock %}

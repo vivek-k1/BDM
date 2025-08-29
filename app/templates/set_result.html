@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="d-flex align-items-center mb-4">
+    <h2 class="me-3 mb-0">{{ title }} - Results</h2>
+    <span class="badge bg-secondary">{{ total }} Questions</span>
+  </div>
+
+  <!-- Result Summary -->
+  <div class="result-summary mb-4">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title mb-0">📊 Test Results</h5>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 mb-3">
+            <div class="text-center">
+              <h4 class="text-primary">{{ score }}</h4>
+              <small class="text-muted">Correct Answers</small>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-3">
+            <div class="text-center">
+              <h4 class="text-danger">{{ total - score }}</h4>
+              <small class="text-muted">Incorrect Answers</small>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-3">
+            <div class="text-center">
+              <h4 class="text-info">{{ "%.1f"|format((score / total * 100) if total > 0 else 0) }}%</h4>
+              <small class="text-muted">Success Rate</small>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-3">
+            <div class="text-center">
+              <h4 class="text-success">{{ (score / total * 10) if total > 0 else 0 | round(2) }}/10</h4>
+              <small class="text-muted">Score (out of 10)</small>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Performance Bar -->
+        <div class="performance-bar mt-3">
+          <div class="progress" style="height: 20px;">
+            <div class="progress-bar bg-success" role="progressbar" style="width: {{ (score / total * 100) if total > 0 else 0 }}%">
+              {{ score }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Detailed Results -->
+  <div class="detailed-results">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title mb-0">📝 Question-by-Question Analysis</h5>
+      </div>
+      <div class="card-body">
+        {% for q in questions %}
+          {% set q_index = loop.index %}
+          {% set result = results[q_index] %}
+          
+          <div class="question-card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <h6 class="card-title mb-0">Q{{ q_index }}. {{ q.text }}</h6>
+              {% if result.is_correct %}
+                <span class="badge bg-success">✓ Correct</span>
+              {% else %}
+                <span class="badge bg-danger">✗ Incorrect</span>
+              {% endif %}
+            </div>
+            <div class="card-body">
+              {% if q.topic %}<div class="question-topic mb-2">{{ q.topic }}</div>{% endif %}
+              
+              <div class="list-group">
+                {% for key, val in q.options.items() %}
+                  <div class="list-group-item {% if result.selected == key and result.is_correct %}correct{% elif result.selected == key and not result.is_correct %}incorrect{% elif key == result.correct %}correct{% endif %}">
+                    <strong>{{ key }}.</strong> {{ val }}
+                    {% if result.selected == key and result.is_correct %}
+                      <span class="badge bg-success float-end">✓ Your Answer (Correct)</span>
+                    {% elif result.selected == key and not result.is_correct %}
+                      <span class="badge bg-danger float-end">✗ Your Answer (Incorrect)</span>
+                    {% elif key == result.correct and result.selected != key %}
+                      <span class="badge bg-success float-end">✓ Correct Answer</span>
+                    {% endif %}
+                  </div>
+                {% endfor %}
+              </div>
+              
+              {% if not result.is_correct %}
+                <div class="alert alert-danger mt-3">
+                  <strong>Explanation:</strong> The correct answer was <strong>{{ result.correct }}</strong>.
+                  {% if result.selected %}
+                    You selected <strong>{{ result.selected }}</strong>.
+                  {% else %}
+                    You did not answer this question.
+                  {% endif %}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Action Buttons -->
+  <div class="text-center mt-4">
+    <div class="btn-group" role="group">
+      <a href="{{ url_for('main.solve_set', set_id=set_id) }}" class="btn btn-primary">
+        📝 Retake Test
+      </a>
+      <a href="{{ url_for('main.practice_set', set_id=set_id) }}" class="btn btn-outline-primary">
+        🎯 Practice Mode
+      </a>
+      <a href="{{ url_for('main.index') }}" class="btn btn-outline-secondary">
+        🏠 Back to Home
+      </a>
+    </div>
+  </div>
+{% endblock %}
