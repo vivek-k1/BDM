@@ -9,7 +9,8 @@
         "D": "As the price of a good decreases, the quantity demanded increases"
       },
       "answer": "D",
-      "topic": "Set 1 Q1 - Demand"
+      "topic": "Set 1 Q1 - Demand",
+      "subject": "bdm"
     },
     {
       "text": "Which distinguishes an inferior good in relation to income?",
@@ -20,7 +21,8 @@
         "D": "It has no substitutes in the market"
       },
       "answer": "B",
-      "topic": "Set 1 Q2 - Inferior goods"
+      "topic": "Set 1 Q2 - Inferior goods",
+      "subject": "bdm"
     },
     {
       "text": "In microeconomics, when does marginal utility become negative?",
@@ -31,7 +33,8 @@
         "D": "When the consumer reaches overconsumption"
       },
       "answer": "D",
-      "topic": "Set 1 Q3 - Utility"
+      "topic": "Set 1 Q3 - Utility",
+      "subject": "bdm"
     },
     {
       "text": "If the price of a product increases by 15% and quantity demanded decreases by 5%, what is the price elasticity of demand?",
@@ -42,7 +45,8 @@
         "D": "0.5"
       },
       "answer": "B",
-      "topic": "Set 1 Q4 - Elasticity"
+      "topic": "Set 1 Q4 - Elasticity",
+      "subject": "bdm"
     },
     {
       "text": "What does Days of Sales of Inventory indicate?",
@@ -53,7 +57,8 @@
         "D": "Average inventory stockout days in a month"
       },
       "answer": "A",
-      "topic": "Set 1 Q5 - Inventory"
+      "topic": "Set 1 Q5 - Inventory",
+      "subject": "bdm"
     },
     {
       "text": "Which Excel function searches for a value in another table and retrieves a reference value?",
@@ -64,7 +69,8 @@
         "D": "VLOOKUP"
       },
       "answer": "D",
-      "topic": "Set 1 Q6 - Excel"
+      "topic": "Set 1 Q6 - Excel",
+      "subject": "bdm"
     },
     {
       "text": "In a saturated market where 60% of users want to upgrade devices soon, and new users are stable, what should manufacturers prioritize?",
@@ -75,7 +81,8 @@
         "D": "Develop upgrade incentives for current users"
       },
       "answer": "D",
-      "topic": "Set 1 Q7 - Strategy"
+      "topic": "Set 1 Q7 - Strategy",
+      "subject": "bdm"
     },
     {
       "text": "Which metric is key to monitor in an A/B test?",
@@ -86,7 +93,8 @@
         "D": "Model training time"
       },
       "answer": "C",
-      "topic": "Set 1 Q8 - A/B testing"
+      "topic": "Set 1 Q8 - A/B testing",
+      "subject": "bdm"
     },
     {
       "text": "If a FinTech company wants to reduce losses, what should they do?",
@@ -97,7 +105,8 @@
         "D": "Increase credit score approval cutoff"
       },
       "answer": "D",
-      "topic": "Set 1 Q9 - FinTech risk"
+      "topic": "Set 1 Q9 - FinTech risk",
+      "subject": "bdm"
     },
     {
       "text": "PayBuddy ran an A/B test on a new recommendation strategy. Based on the table, which statements are true? (i) Credit transactions increased; (ii) Debit increased; (iii) Both increased; (iv) Credit decreased; (v) Debit decreased.\nTreatment: Credit 1800$, Debit 2700$ | Control: Credit 1750$, Debit 2800$",
@@ -108,7 +117,8 @@
         "D": "(iv) and (ii)"
       },
       "answer": "A",
-      "topic": "Set 1 Q10 - A/B interpretation"
+      "topic": "Set 1 Q10 - A/B interpretation",
+      "subject": "bdm"
     },
     {
       "text": "In the PayBuddy FinTech case, how do online payment companies primarily make money?",
@@ -119,7 +129,8 @@
         "D": "Both A and B"
       },
       "answer": "D",
-      "topic": "Set 1 Q11 - Monetization"
+      "topic": "Set 1 Q11 - Monetization",
+      "subject": "bdm"
     },
     {
       "text": "Calculate overall profit for PePhone FinTech (3.5% transaction fee, 18% p.a. interest on credit, loss on defaults; 1-year payback). Data: (1) 200 Approved Paid; (2) 150 Approved Default; (3) 250 Declined; (4) 300 Declined; (5) 120 Approved Default (refer to pdf)",
@@ -130,7 +141,8 @@
         "D": "-210.0"
       },
       "answer": "B",
-      "topic": "Set 1 Q12 - Profit calc"
+      "topic": "Set 1 Q12 - Profit calc",
+      "subject": "bdm"
     },
     {
       "text": "What is the primary purpose of maintaining a bench of employees in IT services?",
@@ -141,7 +153,8 @@
         "D": "To keep underperformers off projects"
       },
       "answer": "A",
-      "topic": "Set 1 Q13 - HR bench"
+      "topic": "Set 1 Q13 - HR bench",
+      "subject": "bdm"
     },
     {
       "text": "Rank candidates for a Software Engineer role (equal weights; more skills/certificates/experience better; fewer join days better). Candidates: A(10,25,4,4), B(12,40,3,5), C(9,15,6,6), D(11,20,5,3)",
@@ -152,7 +165,8 @@
         "D": "B > C > A > D"
       },
       "answer": "A",
-      "topic": "Set 1 Q14 - Ranking"
+      "topic": "Set 1 Q14 - Ranking",
+      "subject": "bdm"
     },
     {
       "text": "In the Fabmart E-Commerce case, what does a bimodal distribution in expenditure data suggest?",
@@ -163,7 +177,8 @@
         "D": "Negative income-spending correlation"
       },
       "answer": "B",
-      "topic": "Set 1 Q15 - Distribution"
+      "topic": "Set 1 Q15 - Distribution",
+      "subject": "bdm"
     },
     {
       "text": "Based on the table, what is the total revenue? Widget X (100,120,110) at 20; Gadget Y (80,90,85) at 30",
@@ -174,7 +189,8 @@
         "D": "11,500"
       },
       "answer": "C",
-      "topic": "Set 1 Q16 - Revenue"
+      "topic": "Set 1 Q16 - Revenue",
+      "subject": "bdm"
     },
     {
       "text": "Which product has a continuously increasing sales trend? Widget X (100,120,110), Gadget Y (80,90,85)",
@@ -185,7 +201,8 @@
         "D": "Both"
       },
       "answer": "B",
-      "topic": "Set 1 Q17 - Trend"
+      "topic": "Set 1 Q17 - Trend",
+      "subject": "bdm"
     },
     {
       "text": "In Ace Gears manufacturing, what is a strategic advantage of internal sourcing? (Select all that apply)",
@@ -196,7 +213,8 @@
         "D": "Reduces incompetence risk"
       },
       "answer": "C",
-      "topic": "Set 1 Q18 - Sourcing (choose primary)"
+      "topic": "Set 1 Q18 - Sourcing (choose primary)",
+      "subject": "bdm"
     },
     {
       "text": "OEE calc: Planned 8 hrs, Availability 85% -> What is Lost Time (hrs)?",
@@ -207,7 +225,8 @@
         "D": "1.4"
       },
       "answer": "C",
-      "topic": "Set 1 Q19 - OEE"
+      "topic": "Set 1 Q19 - OEE",
+      "subject": "bdm"
     },
     {
       "text": "OEE calc: Performance 88% and Design Speed 200 -> Actual Speed?",
@@ -218,7 +237,8 @@
         "D": "184"
       },
       "answer": "C",
-      "topic": "Set 1 Q20 - OEE"
+      "topic": "Set 1 Q20 - OEE",
+      "subject": "bdm"
     },
     {
       "text": "OEE calc: Quality (%) approximates? (Given Good Units 1000 and typical scrap)",
@@ -229,7 +249,8 @@
         "D": "87%"
       },
       "answer": "B",
-      "topic": "Set 1 Q21 - OEE Quality"
+      "topic": "Set 1 Q21 - OEE Quality",
+      "subject": "bdm"
     },
     {
       "text": "Overall OEE (%) approximates? (Availability 85%, Performance 88%, Quality ~81%)",
@@ -240,7 +261,8 @@
         "D": "67%"
       },
       "answer": "B",
-      "topic": "Set 1 Q22 - OEE Overall"
+      "topic": "Set 1 Q22 - OEE Overall",
+      "subject": "bdm"
     },
     {
       "text": "In industry analysis, what does Porter's five forces help with?",
@@ -251,9 +273,9 @@
         "D": "Consumer surveys"
       },
       "answer": "B",
-      "topic": "Set 1 Q23 - Porter"
+      "topic": "Set 1 Q23 - Porter",
+      "subject": "bdm"
     },
-
     {
       "text": "In economic flow, what role do households play?",
       "options": {
@@ -263,7 +285,8 @@
         "D": "Regulators"
       },
       "answer": "C",
-      "topic": "Set 2 Q1 - Flow"
+      "topic": "Set 2 Q1 - Flow",
+      "subject": "bdm"
     },
     {
       "text": "What roles does government play in circular flow?",
@@ -274,7 +297,8 @@
         "D": "None"
       },
       "answer": "C",
-      "topic": "Set 2 Q2 - Flow"
+      "topic": "Set 2 Q2 - Flow",
+      "subject": "bdm"
     },
     {
       "text": "For data, which function counts cells meeting a condition?",
@@ -285,7 +309,8 @@
         "D": "COUNTSUM"
       },
       "answer": "C",
-      "topic": "Set 2 Q3 - Excel"
+      "topic": "Set 2 Q3 - Excel",
+      "subject": "bdm"
     },
     {
       "text": "Which is a comprehensive data source covering all households?",
@@ -296,7 +321,8 @@
         "D": "Economic Census"
       },
       "answer": "C",
-      "topic": "Set 2 Q4 - Data sources"
+      "topic": "Set 2 Q4 - Data sources",
+      "subject": "bdm"
     },
     {
       "text": "How does increased ordering cost affect EOQ?",
@@ -307,7 +333,8 @@
         "D": "Fluctuates"
       },
       "answer": "A",
-      "topic": "Set 2 Q5 - EOQ"
+      "topic": "Set 2 Q5 - EOQ",
+      "subject": "bdm"
     },
     {
       "text": "What is the anchoring effect as a nudge in E-Commerce?",
@@ -318,7 +345,8 @@
         "D": "Lowest prices always"
       },
       "answer": "A",
-      "topic": "Set 2 Q6 - Nudge"
+      "topic": "Set 2 Q6 - Nudge",
+      "subject": "bdm"
     },
     {
       "text": "In PayBuddy case, why offer BNPL without fees?",
@@ -329,7 +357,8 @@
         "D": "Regulatory attention"
       },
       "answer": "B",
-      "topic": "Set 2 Q7 - BNPL"
+      "topic": "Set 2 Q7 - BNPL",
+      "subject": "bdm"
     },
     {
       "text": "How does seasonal sales pattern influence inventory?",
@@ -340,7 +369,8 @@
         "D": "Ignore for simplicity"
       },
       "answer": "B",
-      "topic": "Set 2 Q8 - Inventory"
+      "topic": "Set 2 Q8 - Inventory",
+      "subject": "bdm"
     },
     {
       "text": "What benefits homogeneous regions in surveys?",
@@ -351,7 +381,8 @@
         "D": "High-income priority"
       },
       "answer": "B",
-      "topic": "Set 2 Q9 - Sampling"
+      "topic": "Set 2 Q9 - Sampling",
+      "subject": "bdm"
     },
     {
       "text": "In strategic manpower, least relevant for employee needs?",
@@ -362,7 +393,8 @@
         "D": "Unemployment rate"
       },
       "answer": "D",
-      "topic": "Set 2 Q10 - Manpower"
+      "topic": "Set 2 Q10 - Manpower",
+      "subject": "bdm"
     },
     {
       "text": "Match: 1. HR form for budget/skills (Indent); 2. Employee recommendations (Referral); 3. Performance eval (Appraisal).",
@@ -373,7 +405,8 @@
         "D": "None"
       },
       "answer": "B",
-      "topic": "Set 2 Q11 - HR matching"
+      "topic": "Set 2 Q11 - HR matching",
+      "subject": "bdm"
     },
     {
       "text": "In FinTech, chronological flow for transaction: Customer → Bank → Platform → Merchant.",
@@ -384,7 +417,8 @@
         "D": "Customer pays Platform, Platform pays Bank, Bank pays Merchant"
       },
       "answer": "C",
-      "topic": "Set 2 Q12 - Flow"
+      "topic": "Set 2 Q12 - Flow",
+      "subject": "bdm"
     },
     {
       "text": "Which channel has worst selection success rate (selected/shortlisted)?",
@@ -395,7 +429,8 @@
         "D": "Referrals"
       },
       "answer": "A",
-      "topic": "Set 2 Q13 - HR channels"
+      "topic": "Set 2 Q13 - HR channels",
+      "subject": "bdm"
     },
     {
       "text": "When to do A/B test?",
@@ -406,7 +441,8 @@
         "D": "Before deployment"
       },
       "answer": "D",
-      "topic": "Set 2 Q14 - A/B timing"
+      "topic": "Set 2 Q14 - A/B timing",
+      "subject": "bdm"
     },
     {
       "text": "Personalized recommendations nudge by?",
@@ -417,7 +453,8 @@
         "D": "Best-sellers only"
       },
       "answer": "C",
-      "topic": "Set 2 Q15 - Personalization"
+      "topic": "Set 2 Q15 - Personalization",
+      "subject": "bdm"
     },
     {
       "text": "Which SKU has highest Days of Inventory? (Based on a similar table)",
@@ -428,7 +465,8 @@
         "D": "LAP007"
       },
       "answer": "D",
-      "topic": "Set 2 Q16 - DoI"
+      "topic": "Set 2 Q16 - DoI",
+      "subject": "bdm"
     },
     {
       "text": "Profit from LAP002 if 12% margin?",
@@ -439,7 +477,8 @@
         "D": "120000"
       },
       "answer": "B",
-      "topic": "Set 2 Q17 - Profit"
+      "topic": "Set 2 Q17 - Profit",
+      "subject": "bdm"
     },
     {
       "text": "% revenue from LAP003 and LAP004?",
@@ -450,7 +489,8 @@
         "D": "30%"
       },
       "answer": "C",
-      "topic": "Set 2 Q18 - Revenue share"
+      "topic": "Set 2 Q18 - Revenue share",
+      "subject": "bdm"
     },
     {
       "text": "OEE for shifts (approximate)?",
@@ -461,7 +501,8 @@
         "D": "92%"
       },
       "answer": "B",
-      "topic": "Set 2 Q19 - OEE"
+      "topic": "Set 2 Q19 - OEE",
+      "subject": "bdm"
     },
     {
       "text": "MAPE for shifts?",
@@ -472,7 +513,8 @@
         "D": "0.25"
       },
       "answer": "B",
-      "topic": "Set 2 Q20 - MAPE"
+      "topic": "Set 2 Q20 - MAPE",
+      "subject": "bdm"
     },
     {
       "text": "In industry, what does PMI indicate?",
@@ -483,7 +525,8 @@
         "D": "Elasticity"
       },
       "answer": "B",
-      "topic": "Set 2 Q21 - PMI"
+      "topic": "Set 2 Q21 - PMI",
+      "subject": "bdm"
     },
     {
       "text": "What does the law of demand state?",
@@ -494,13 +537,15 @@
         "D": "As the price of a good decreases, the quantity supplied increases"
       },
       "answer": "A",
-      "topic": "2025 Jan Q1"
+      "topic": "2025 Jan Q1",
+      "subject": "bdm"
     },
     {
       "text": "Which function would you use to count the number of cells that meet a specific condition?",
       "options": {"A": "COUNT", "B": "COUNTA", "C": "COUNTIF", "D": "COUNTSUM"},
       "answer": "C",
-      "topic": "2025 Jan Q2"
+      "topic": "2025 Jan Q2",
+      "subject": "bdm"
     },
     {
       "text": "In a saturated smartphone market where 70% plan upgrades soon and new users unchanged, what should manufacturers prioritize?",
@@ -511,7 +556,8 @@
         "D": "Develop targeted upgrade incentives for current users"
       },
       "answer": "D",
-      "topic": "2025 Jan Q3"
+      "topic": "2025 Jan Q3",
+      "subject": "bdm"
     },
     {
       "text": "What does the Days of Sales of Inventory indicate?",
@@ -522,7 +568,8 @@
         "D": "Average inventory stockout days in a month"
       },
       "answer": "A",
-      "topic": "2025 Jan Q4"
+      "topic": "2025 Jan Q4",
+      "subject": "bdm"
     },
     {
       "text": "Which factor is most critical for market potential of a new product?",
@@ -533,13 +580,15 @@
         "D": "Current market share of existing products"
       },
       "answer": "A",
-      "topic": "2025 Jan Q5"
+      "topic": "2025 Jan Q5",
+      "subject": "bdm"
     },
     {
       "text": "Which metric is most important to monitor during an A/B test?",
       "options": {"A": "Total users", "B": "Uptime", "C": "KPIs specific to the experiment", "D": "Model training time"},
       "answer": "C",
-      "topic": "2025 Jan Q6"
+      "topic": "2025 Jan Q6",
+      "subject": "bdm"
     },
     {
       "text": "Arrange steps for unstructured data ranking modeling:",
@@ -550,7 +599,8 @@
         "D": "I -> II -> I -> III -> IV"
       },
       "answer": "B",
-      "topic": "2025 Jan Q7 (I:Normalizing, II:Preprocessing, III:Ranking, IV:Composite score)"
+      "topic": "2025 Jan Q7 (I:Normalizing, II:Preprocessing, III:Ranking, IV:Composite score)",
+      "subject": "bdm"
     },
     {
       "text": "If a FinTech company wants to cut down losses, what should they do?",
@@ -561,25 +611,29 @@
         "D": "Increase approval cutoff"
       },
       "answer": "D",
-      "topic": "2025 Jan Q8"
+      "topic": "2025 Jan Q8",
+      "subject": "bdm"
     },
     {
       "text": "PayBuddy A/B: Treatment Credit 1725, Debit 2780; Control Credit 1810, Debit 2679. Which statements are true? (i) Credit increased (ii) Debit increased (iii) Both increased (iv) Credit decreased (v) Debit decreased",
       "options": {"A": "(i) & (v)", "B": "Only (iii)", "C": "Only (i)", "D": "(ii) & (iv)", "E": "Only (v)"},
       "answer": "D",
-      "topic": "2025 Jan Q9"
+      "topic": "2025 Jan Q9",
+      "subject": "bdm"
     },
     {
       "text": "PePhone profit calc with given table (3.5% fee, 18% interest on credit, loss on defaults; declined complete; 1y).",
       "options": {"A": "-211.0", "B": "-192.72", "C": "-131.94", "D": "-162.18"},
       "answer": "B",
-      "topic": "2025 Jan Q10"
+      "topic": "2025 Jan Q10",
+      "subject": "bdm"
     },
     {
       "text": "Which conditions can use weighted average to analyze expenditure?",
       "options": {"A": "Importance of categories", "B": "Population size of regions", "C": "Adjusting for inflation", "D": "Impact of income levels"},
       "answer": "A,B",
-      "topic": "2025 Jan Q11 (multi-select)"
+      "topic": "2025 Jan Q11 (multi-select)",
+      "subject": "bdm"
     },
     {
       "text": "Excel SUBTOTAL on filtered data: which is correct?",
@@ -590,61 +644,191 @@
         "D": "Works across any sheet regardless of visibility"
       },
       "answer": "B",
-      "topic": "2025 Jan Q12"
+      "topic": "2025 Jan Q12",
+      "subject": "bdm"
     },
     {
       "text": "Income change table: percentage change in total revenue when income rises 15k -> 25k",
       "options": {"A": "41.2%", "B": "42%", "C": "42.5%", "D": "41.8%"},
       "answer": "A",
-      "topic": "2025 Jan Q13"
+      "topic": "2025 Jan Q13",
+      "subject": "bdm"
     },
     {
       "text": "Type of goods based on table (income up, price slightly down, quantity up)",
       "options": {"A": "Normal Goods", "B": "Inferior Goods", "C": "Luxury Goods", "D": "None"},
       "answer": "A",
-      "topic": "2025 Jan Q14"
+      "topic": "2025 Jan Q14",
+      "subject": "bdm"
     },
     {
       "text": "Total revenue from product table",
       "options": {"A": "67125", "B": "66895", "C": "65285", "D": "67565"},
       "answer": "A",
-      "topic": "2025 Jan Q15"
+      "topic": "2025 Jan Q15",
+      "subject": "bdm"
     },
     {
       "text": "Which product has a continuously increasing trend?",
       "options": {"A": "Gadget X", "B": "Widget A", "C": "Widget C", "D": "Gadget Q"},
       "answer": "C",
-      "topic": "2025 Jan Q16"
+      "topic": "2025 Jan Q16",
+      "subject": "bdm"
     },
     {
       "text": "What percentage of total revenue do Widgets contribute?",
       "options": {"A": "30.1%", "B": "42.4%", "C": "25.6%", "D": "35.5%"},
       "answer": "A",
-      "topic": "2025 Jan Q17"
+      "topic": "2025 Jan Q17",
+      "subject": "bdm"
     },
     {
       "text": "OEE table: find X1 (lost time hrs)",
       "options": {"A": "1", "B": "1.2", "C": "1.4", "D": "1.6"},
       "answer": "A",
-      "topic": "2025 Jan Q18"
+      "topic": "2025 Jan Q18",
+      "subject": "bdm"
     },
     {
       "text": "OEE table: find X2 (actual speed)",
       "options": {"A": "176", "B": "180", "C": "184", "D": "172"},
       "answer": "B",
-      "topic": "2025 Jan Q19"
+      "topic": "2025 Jan Q19",
+      "subject": "bdm"
     },
     {
       "text": "OEE table: Quality % (approx)",
       "options": {"A": "83 to 83.5", "B": "80 to 82", "C": "85 to 86", "D": "78 to 79"},
       "answer": "A",
-      "topic": "2025 Jan Q20"
+      "topic": "2025 Jan Q20",
+      "subject": "bdm"
     },
     {
       "text": "OEE table: Overall OEE % (approx)",
       "options": {"A": "65 to 65.75", "B": "60 to 62", "C": "70 to 72", "D": "55 to 58"},
       "answer": "A",
-      "topic": "2025 Jan Q21"
+      "topic": "2025 Jan Q21",
+      "subject": "bdm"
+    },
+    {
+      "text": "What is the primary function of a mobile app development framework?",
+      "options": {
+        "A": "To create web applications",
+        "B": "To provide tools and libraries for building mobile apps",
+        "C": "To design user interfaces only",
+        "D": "To manage server databases"
+      },
+      "answer": "B",
+      "topic": "MAD2 Q1 - Framework Basics",
+      "subject": "mad2"
+    },
+    {
+      "text": "Which platform is primarily targeted by React Native?",
+      "options": {
+        "A": "Web browsers only",
+        "B": "iOS and Android",
+        "C": "Desktop applications",
+        "D": "Server-side applications"
+      },
+      "answer": "B",
+      "topic": "MAD2 Q2 - React Native",
+      "subject": "mad2"
+    },
+    {
+      "text": "What is the main advantage of cross-platform development?",
+      "options": {
+        "A": "Faster development time",
+        "B": "Single codebase for multiple platforms",
+        "C": "Better performance than native apps",
+        "D": "Lower development costs"
+      },
+      "answer": "B",
+      "topic": "MAD2 Q3 - Cross-platform",
+      "subject": "mad2"
+    },
+    {
+      "text": "Which programming language is most commonly used for Android development?",
+      "options": {
+        "A": "Swift",
+        "B": "Java/Kotlin",
+        "C": "C#",
+        "D": "Python"
+      },
+      "answer": "B",
+      "topic": "MAD2 Q4 - Android Development",
+      "subject": "mad2"
+    },
+    {
+      "text": "What is the purpose of an API in mobile app development?",
+      "options": {
+        "A": "To store user data locally",
+        "B": "To provide communication between app and server",
+        "C": "To design user interfaces",
+        "D": "To manage app permissions"
+      },
+      "answer": "B",
+      "topic": "MAD2 Q5 - APIs",
+      "subject": "mad2"
+    },
+    {
+      "text": "Which testing approach is most important for mobile apps?",
+      "options": {
+        "A": "Unit testing only",
+        "B": "Integration testing only",
+        "C": "User acceptance testing only",
+        "D": "Combination of multiple testing types"
+      },
+      "answer": "D",
+      "topic": "MAD2 Q6 - Testing",
+      "subject": "mad2"
+    },
+    {
+      "text": "What is the primary purpose of a mobile app store?",
+      "options": {
+        "A": "To store app code",
+        "B": "To distribute and sell mobile applications",
+        "C": "To test applications",
+        "D": "To host app servers"
+      },
+      "answer": "B",
+      "topic": "MAD2 Q7 - App Stores",
+      "subject": "mad2"
+    },
+    {
+      "text": "Which factor is most critical for mobile app performance?",
+      "options": {
+        "A": "App size",
+        "B": "User interface design",
+        "C": "Code optimization and efficient algorithms",
+        "D": "App store rating"
+      },
+      "answer": "C",
+      "topic": "MAD2 Q8 - Performance",
+      "subject": "mad2"
+    },
+    {
+      "text": "What is the main purpose of mobile app analytics?",
+      "options": {
+        "A": "To track app crashes only",
+        "B": "To understand user behavior and improve app",
+        "C": "To increase app store ranking",
+        "D": "To reduce app size"
+      },
+      "answer": "B",
+      "topic": "MAD2 Q9 - Analytics",
+      "subject": "mad2"
+    },
+    {
+      "text": "Which security measure is most important for mobile apps?",
+      "options": {
+        "A": "App icon design",
+        "B": "Data encryption and secure authentication",
+        "C": "App store compliance",
+        "D": "User interface colors"
+      },
+      "answer": "B",
+      "topic": "MAD2 Q10 - Security",
+      "subject": "mad2"
     }
   ]
 }
