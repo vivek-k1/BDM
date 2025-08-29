@@ -4,7 +4,7 @@ import json
 import os
 from typing import Dict, List, Any
 
-from flask import Blueprint, render_template, request, redirect, url_for, flash
+from flask import Blueprint, render_template, request, redirect, url_for, flash, session
 
 
 bp = Blueprint('main', __name__)
@@ -256,7 +256,9 @@ def practice_all():
     else:
         questions = [q for q in questions if (q.get('subject') or 'bdm') == 'bdm']
     
-    results: Dict[int, Dict[str, Any]] = {}
+    # Use session to persist practice results across requests
+    session_key = f'practice_results_{subject}'
+    results: Dict[int, Dict[str, Any]] = session.get(session_key, {})
     current_question = 1
     
     # Get current question from session or request
@@ -274,11 +276,12 @@ def practice_all():
                 correct_answer = q.get('answer')
                 is_correct = (selected == correct_answer) if correct_answer else None
                 
-                results[current_question] = {
+                results[str(current_question)] = {
                     'selected_answer': selected,
-                    'is_correct': is_correct,
+                    'is_correct': bool(is_correct) if is_correct is not None else None,
                     'correct': correct_answer,
                 }
+                session[session_key] = results
         
         elif action == 'next':
             current_question = min(current_question + 1, len(questions))
@@ -286,11 +289,12 @@ def practice_all():
             current_question = max(current_question - 1, 1)
         elif action == 'finish':
             flash('Practice session completed!', 'success')
+            session.pop(session_key, None)
             return redirect(url_for('main.index'))
     
     # Calculate statistics
-    answered_questions = len([r for r in results.values() if r.get('selected_answer')])
-    correct_answers = len([r for r in results.values() if r.get('is_correct')])
+    answered_questions = len([r for r in results.values() if r and r.get('selected_answer')])
+    correct_answers = len([r for r in results.values() if r and r.get('is_correct')])
     incorrect_answers = answered_questions - correct_answers
     correct_percentage = (correct_answers / answered_questions * 100) if answered_questions > 0 else 0
     
@@ -302,9 +306,12 @@ def practice_all():
     elif subject == 'all':
         title = 'Practice All Questions'
     
+    # Cast keys to int for template access consistency
+    normalized_results: Dict[int, Dict[str, Any]] = {int(k): v for k, v in results.items()}
+
     return render_template('practice.html', 
                          questions=questions, 
-                         results=results, 
+                         results=normalized_results, 
                          current_question=current_question,
                          total=len(questions), 
                          title=title,
@@ -328,7 +335,8 @@ def practice_subject(subject):
     else:
         questions = [q for q in questions if (q.get('subject') or 'bdm') == 'bdm']
     
-    results: Dict[int, Dict[str, Any]] = {}
+    session_key = f'practice_results_{subject}'
+    results: Dict[int, Dict[str, Any]] = session.get(session_key, {})
     current_question = 1
     
     # Get current question from session or request
@@ -346,11 +354,12 @@ def practice_subject(subject):
                 correct_answer = q.get('answer')
                 is_correct = (selected == correct_answer) if correct_answer else None
                 
-                results[current_question] = {
+                results[str(current_question)] = {
                     'selected_answer': selected,
-                    'is_correct': is_correct,
+                    'is_correct': bool(is_correct) if is_correct is not None else None,
                     'correct': correct_answer,
                 }
+                session[session_key] = results
         
         elif action == 'next':
             current_question = min(current_question + 1, len(questions))
@@ -358,11 +367,12 @@ def practice_subject(subject):
             current_question = max(current_question - 1, 1)
         elif action == 'finish':
             flash('Practice session completed!', 'success')
+            session.pop(session_key, None)
             return redirect(url_for('main.index'))
     
     # Calculate statistics
-    answered_questions = len([r for r in results.values() if r.get('selected_answer')])
-    correct_answers = len([r for r in results.values() if r.get('is_correct')])
+    answered_questions = len([r for r in results.values() if r and r.get('selected_answer')])
+    correct_answers = len([r for r in results.values() if r and r.get('is_correct')])
     incorrect_answers = answered_questions - correct_answers
     correct_percentage = (correct_answers / answered_questions * 100) if answered_questions > 0 else 0
     
@@ -373,10 +383,12 @@ def practice_subject(subject):
         title = 'Practice MAD2 Questions'
     elif subject == 'all':
         title = 'Practice All Questions'
+
+    normalized_results: Dict[int, Dict[str, Any]] = {int(k): v for k, v in results.items()}
     
     return render_template('practice.html', 
                          questions=questions, 
-                         results=results, 
+                         results=normalized_results, 
                          current_question=current_question,
                          total=len(questions), 
                          title=title,
@@ -445,5 +457,64 @@ def import_questions():
         return redirect(url_for('main.index'))
 
     return render_template('import.html')
+
+
+@bp.route('/mad2/set/<int:set_id>')
+def mad2_list_set(set_id):
+    # Load only MAD2 questions
+    all_questions = load_questions()
+    mad2_questions = [q for q in all_questions if (q.get('subject') or '').lower() == 'mad2']
+
+    # Partition into sets of 25
+    start = 0 if set_id == 1 else 25 if set_id == 2 else None
+    if start is None or start >= len(mad2_questions):
+        flash('Invalid MAD2 set number', 'danger')
+        return redirect(url_for('main.index', subject='mad2'))
+    end = min(start + 25, len(mad2_questions))
+    set_questions = mad2_questions[start:end]
+    title = f"MAD2 Set {set_id}: Predicted Question Paper"
+    return render_template('set_list.html', questions=set_questions, set_id=set_id, title=title)
+
+
+@bp.route('/mad2/solve-set/<int:set_id>', methods=['GET', 'POST'])
+def mad2_solve_set(set_id):
+    all_questions = load_questions()
+    mad2_questions = [q for q in all_questions if (q.get('subject') or '').lower() == 'mad2']
+    start = 0 if set_id == 1 else 25 if set_id == 2 else None
+    if start is None or start >= len(mad2_questions):
+        flash('Invalid MAD2 set number', 'danger')
+        return redirect(url_for('main.index', subject='mad2'))
+    end = min(start + 25, len(mad2_questions))
+    set_questions = mad2_questions[start:end]
+    title = f"MAD2 Set {set_id}: Predicted Question Paper"
+    time_limit = 60
+
+    if request.method == 'POST':
+        score = 0
+        results: Dict[int, Dict[str, Any]] = {}
+        for idx, q in enumerate(set_questions, start=1):
+            selected = request.form.get(f'ans_{idx}')
+            correct_answer = q.get('answer')
+            is_correct = (selected == correct_answer) if (selected and correct_answer) else False
+            if is_correct:
+                score += 1
+            results[idx] = {'selected': selected, 'is_correct': is_correct, 'correct': correct_answer}
+        return render_template('set_result.html', questions=set_questions, results=results, score=score, total=len(set_questions), set_id=set_id, title=title)
+
+    return render_template('solve_set.html', questions=set_questions, set_id=set_id, title=title, time_limit=time_limit)
+
+
+@bp.route('/mad2/practice-set/<int:set_id>')
+def mad2_practice_set(set_id):
+    all_questions = load_questions()
+    mad2_questions = [q for q in all_questions if (q.get('subject') or '').lower() == 'mad2']
+    start = 0 if set_id == 1 else 25 if set_id == 2 else None
+    if start is None or start >= len(mad2_questions):
+        flash('Invalid MAD2 set number', 'danger')
+        return redirect(url_for('main.index', subject='mad2'))
+    end = min(start + 25, len(mad2_questions))
+    set_questions = mad2_questions[start:end]
+    title = f"MAD2 Practice Set {set_id}"
+    return render_template('practice.html', questions=set_questions, title=title, total=len(set_questions))
 
 
