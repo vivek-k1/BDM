@@ -95,11 +95,11 @@ def solve_set(set_id):
     if set_id == 1:
         set_questions = questions[:23]
         title = "Set 1: Predicted Question Paper"
-        time_limit = 45  # minutes
+        time_limit = 60  # minutes (1 hour)
     elif set_id == 2:
         set_questions = questions[23:46]
         title = "Set 2: Predicted Question Paper"
-        time_limit = 45  # minutes
+        time_limit = 60  # minutes (1 hour)
     else:
         flash('Invalid set number', 'danger')
         return redirect(url_for('main.index'))
