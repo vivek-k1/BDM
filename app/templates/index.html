@@ -25,7 +25,7 @@
         <a href="{{ url_for('main.index', subject='mad2') }}" class="btn btn-outline-success w-100 {% if request.args.get('subject') == 'mad2' %}active{% endif %}">
           <h5 class="mb-2">📱</h5>
           <strong>MAD2</strong><br>
-          <small>Modern Development</small>
+          <small>Modern App Development</small>
         </a>
       </div>
       <div class="col-md-4">
@@ -34,6 +34,63 @@
           <strong>All Subjects</strong><br>
           <small>Complete Question Bank</small>
         </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sets Section -->
+  <div class="sets-section mt-4">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title mb-0">📋 Practice Sets</h4>
+      </div>
+      <div class="card-body">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="set-card">
+              <div class="set-header">
+                <h5>📝 Set 1: Predicted Question Paper</h5>
+                <span class="badge bg-primary">23 Questions</span>
+              </div>
+              <div class="set-info">
+                <p><strong>Focus:</strong> Economics basics, Excel functions, inventory metrics, FinTech calculations</p>
+                <div class="set-options">
+                  <a href="{{ url_for('main.solve_set', set_id=1) }}" class="btn btn-primary btn-sm">
+                    🕒 Solve with Timer (45 min)
+                  </a>
+                  <a href="{{ url_for('main.practice_set', set_id=1) }}" class="btn btn-outline-primary btn-sm">
+                    🎯 Practice Mode
+                  </a>
+                  <a href="{{ url_for('main.list_set', set_id=1) }}" class="btn btn-outline-secondary btn-sm">
+                    📋 View Questions
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="set-card">
+              <div class="set-header">
+                <h5>📝 Set 2: Predicted Question Paper</h5>
+                <span class="badge bg-primary">23 Questions</span>
+              </div>
+              <div class="set-info">
+                <p><strong>Focus:</strong> Macro/micro roles, elasticity, firm ratios, industry metrics</p>
+                <div class="set-options">
+                  <a href="{{ url_for('main.solve_set', set_id=2) }}" class="btn btn-primary btn-sm">
+                    🕒 Solve with Timer (45 min)
+                  </a>
+                  <a href="{{ url_for('main.practice_set', set_id=2) }}" class="btn btn-outline-primary btn-sm">
+                    🎯 Practice Mode
+                  </a>
+                  <a href="{{ url_for('main.list_set', set_id=2) }}" class="btn btn-outline-secondary btn-sm">
+                    📋 View Questions
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

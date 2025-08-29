@@ -1,3 +1,104 @@
+/* Sets Section */
+.sets-section .card {
+  background: rgba(255, 255, 255, 0.98);
+  border-left: 4px solid var(--primary-color);
+}
+
+.set-card {
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.set-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-color);
+}
+
+.set-header {
+  display: flex;
+  justify-content: between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.set-header h5 {
+  margin: 0;
+  font-weight: 700;
+  color: var(--dark-color);
+  flex: 1;
+}
+
+.set-header .badge {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+.set-info p {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.set-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.set-options .btn {
+  text-align: center;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.set-options .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.set-options .btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.set-options .btn-primary:hover {
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.set-options .btn-outline-primary {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.set-options .btn-outline-primary:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: transparent;
+  color: white;
+}
+
+.set-options .btn-outline-secondary {
+  border-color: #6b7280;
+  color: #6b7280;
+}
+
+.set-options .btn-outline-secondary:hover {
+  background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+  border-color: transparent;
+  color: white;
+}
+
 /* Options Preview */
 .options-preview {
   margin-bottom: 1rem;
@@ -771,6 +872,15 @@ textarea.form-control {
   
   .timer {
     font-size: 1.5rem;
+  }
+  
+  .set-options {
+    gap: 0.5rem;
+  }
+  
+  .set-options .btn {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.8rem;
   }
 }
 
