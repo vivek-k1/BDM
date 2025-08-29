@@ -43,7 +43,7 @@
     <div class="bdm-questions-section mt-4">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title mb-0">📊 BDM Practice Questions</h4>
+          <h4 class="card-title mb-0">📊 BDM Practice Questions (Preview)</h4>
         </div>
         <div class="card-body">
           <div class="row g-4">
@@ -84,8 +84,12 @@
           
           {% if questions %}
             <div class="text-center mt-4">
+              <div class="alert alert-info">
+                <strong>📚 {{ questions|length }} Total BDM Questions Available</strong><br>
+                <small>Click below to practice all {{ questions|length }} questions</small>
+              </div>
               <a href="{{ url_for('main.practice_all', subject='bdm') }}" class="btn btn-primary btn-lg">
-                🎯 Practice All BDM Questions ({{ questions|length }} total)
+                🎯 Practice All {{ questions|length }} BDM Questions
               </a>
             </div>
           {% endif %}
