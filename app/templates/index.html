@@ -302,4 +302,55 @@
   </div>
 {% endblock %}
 
+{% block scripts %}
+<script>
+  // Track when homepage is visited
+  va('track', 'homepage_visited', {
+    subject: '{{ request.args.get("subject", "bdm") }}',
+    total_questions: '{{ questions|length if questions else 0 }}'
+  });
+  
+  // Track subject selection
+  document.addEventListener('click', function(e) {
+    if (e.target.tagName === 'A' && e.target.href.includes('subject=')) {
+      const subject = e.target.href.match(/subject=([^&]+)/)?.[1] || 'unknown';
+      va('track', 'subject_selected', {
+        subject: subject,
+        button_text: e.target.textContent.trim()
+      });
+    }
+    
+    // Track practice set interactions
+    if (e.target.textContent.includes('Solve with Timer')) {
+      va('track', 'timer_mode_selected', {
+        set_type: e.target.closest('.set-card')?.querySelector('h5')?.textContent || 'unknown'
+      });
+    } else if (e.target.textContent.includes('Practice Mode')) {
+      va('track', 'practice_mode_selected', {
+        set_type: e.target.closest('.set-card')?.querySelector('h5')?.textContent || 'unknown'
+      });
+    } else if (e.target.textContent.includes('View Questions')) {
+      va('track', 'view_questions_selected', {
+        set_type: e.target.closest('.set-card')?.querySelector('h5')?.textContent || 'unknown'
+      });
+    }
+    
+    // Track quick actions
+    if (e.target.textContent.includes('Practice All')) {
+      va('track', 'practice_all_clicked', {
+        from_page: 'homepage'
+      });
+    } else if (e.target.textContent.includes('Add Question')) {
+      va('track', 'add_question_clicked', {
+        from_page: 'homepage'
+      });
+    } else if (e.target.textContent.includes('Bulk Import')) {
+      va('track', 'bulk_import_clicked', {
+        from_page: 'homepage'
+      });
+    }
+  });
+</script>
+{% endblock %}
+
 

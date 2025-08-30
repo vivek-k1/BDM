@@ -43,3 +43,33 @@
     </div>
   </div>
 {% endblock %}
+
+{% block scripts %}
+<script>
+  // Track when result is shown
+  va('track', 'result_viewed', {
+    question_id: '{{ q_id }}',
+    is_correct: '{{ "true" if is_correct else "false" }}',
+    selected_answer: '{{ selected }}',
+    correct_answer: '{{ question.answer }}',
+    topic: '{{ question.topic or "general" }}'
+  });
+  
+  // Track navigation actions
+  document.addEventListener('click', function(e) {
+    if (e.target.tagName === 'A') {
+      if (e.target.textContent.includes('Next Question')) {
+        va('track', 'next_question_clicked', {
+          current_question: '{{ q_id }}',
+          total_questions: '{{ total_questions }}'
+        });
+      } else if (e.target.textContent.includes('Back to Home')) {
+        va('track', 'back_to_home_clicked', {
+          from_page: 'result',
+          question_id: '{{ q_id }}'
+        });
+      }
+    }
+  });
+</script>
+{% endblock %}

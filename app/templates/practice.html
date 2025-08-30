@@ -139,3 +139,57 @@
     </div>
   {% endif %}
 {% endblock %}
+
+{% block scripts %}
+<script>
+  // Track when practice session starts
+  va('track', 'practice_session_started', {
+    total_questions: '{{ total }}',
+    title: '{{ title or "Practice" }}'
+  });
+  
+  // Track question interactions
+  document.addEventListener('submit', function(e) {
+    const form = e.target;
+    const action = form.querySelector('button[name="action"]:focus')?.value || 'submit';
+    
+    if (action === 'submit') {
+      const selectedAnswer = form.querySelector('input[name="answer"]:checked');
+      if (selectedAnswer) {
+        va('track', 'practice_answer_submitted', {
+          question_number: '{{ q_index }}',
+          selected_answer: selectedAnswer.value,
+          topic: '{{ q.topic or "general" }}'
+        });
+      }
+    } else if (action === 'next') {
+      va('track', 'practice_next_question', {
+        current_question: '{{ q_index }}',
+        total_questions: '{{ total }}'
+      });
+    } else if (action === 'previous') {
+      va('track', 'practice_previous_question', {
+        current_question: '{{ q_index }}',
+        total_questions: '{{ total }}'
+      });
+    } else if (action === 'finish') {
+      va('track', 'practice_session_finished', {
+        total_questions: '{{ total }}',
+        answered_questions: '{{ answered_questions }}',
+        correct_answers: '{{ correct_answers }}',
+        success_rate: '{{ "%.1f"|format(correct_percentage) }}%'
+      });
+    }
+  });
+  
+  // Track when practice summary is viewed
+  if ('{{ results and total > 0 }}' === 'True') {
+    va('track', 'practice_summary_viewed', {
+      total_questions: '{{ total }}',
+      answered_questions: '{{ answered_questions }}',
+      correct_answers: '{{ correct_answers }}',
+      success_rate: '{{ "%.1f"|format(correct_percentage) }}%'
+    });
+  }
+</script>
+{% endblock %}

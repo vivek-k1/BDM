@@ -23,3 +23,26 @@
     </div>
   </div>
 {% endblock %}
+
+{% block scripts %}
+<script>
+  // Track when a question is displayed
+  va('track', 'question_viewed', {
+    question_id: '{{ q_id }}',
+    topic: '{{ question.topic or "general" }}',
+    total_questions: '{{ total_questions }}'
+  });
+  
+  // Track when user submits an answer
+  document.querySelector('form').addEventListener('submit', function() {
+    const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+    if (selectedAnswer) {
+      va('track', 'answer_submitted', {
+        question_id: '{{ q_id }}',
+        selected_answer: selectedAnswer.value,
+        topic: '{{ question.topic or "general" }}'
+      });
+    }
+  });
+</script>
+{% endblock %}
